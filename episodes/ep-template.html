@@ -4,13 +4,61 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>회차 템플릿</title>
+  <meta name="description" content="회차별 HTML 페이지 제작을 위한 공통 템플릿" />
   <link rel="stylesheet" href="../site.css" />
 </head>
+
 <body>
   <div class="container">
-    <h1>회차 템플릿</h1>
-    <p>이 템플릿을 복사해 ep01.html, ep02.html로 확장합니다.</p>
-    <p><a href="../">← 홈으로</a></p>
+
+    <header class="hero">
+      <div class="brand">🌐 NCG Religious Revolution Web Archive</div>
+      <h1>회차 템플릿</h1>
+      <p class="subtitle">이 템플릿을 복사해 <b>ep01.html</b>, <b>ep02.html</b>… 형태로 확장합니다.</p>
+    </header>
+
+    <section class="panel">
+      <div class="grid">
+
+        <div class="card">
+          <h2 style="margin:0 0 10px; font-size:18px;">빠른 사용법</h2>
+          <ol style="margin:0; padding-left:18px; color:var(--muted); line-height:1.85;">
+            <li><code>episodes/ep-template.html</code>을 복사</li>
+            <li>파일명을 <code>ep01.html</code>처럼 변경</li>
+            <li>제목/요약/본문/링크만 교체</li>
+          </ol>
+
+          <hr />
+
+          <a class="btn" href="../index.html"><span>← 홈으로</span></a>
+        </div>
+
+        <div class="card">
+          <h2 style="margin:0 0 10px; font-size:22px;">(예시) Episode 01</h2>
+          <p style="margin:0 0 14px; color:var(--muted);">
+            여기는 회차별 본문이 들어가는 영역입니다. 문단을 그대로 붙여넣어도 가독성이 유지됩니다.
+          </p>
+
+          <h3 style="margin:18px 0 8px; color:var(--accent); font-size:16px;">1. 도입</h3>
+          <p>…</p>
+
+          <h3 style="margin:18px 0 8px; color:var(--accent); font-size:16px;">2. 본문</h3>
+          <p>…</p>
+
+          <h3 style="margin:18px 0 8px; color:var(--accent); font-size:16px;">3. 결론</h3>
+          <p>…</p>
+
+          <hr />
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn" href="#"><span>PDF 보기(추후)</span></a>
+            <a class="btn" href="#"><span>YouTube 보기(추후)</span></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </div>
 </body>
 </html>
