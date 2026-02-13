@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background: #0b0f14;
+  color: #e8eef6;
+}
+
+.container {
+  max-width: 960px;
+  margin: 80px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: #121a24;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+}
+
+.card a {
+  color: #ffc000;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.card a:hover {
+  opacity: 0.8;
+}
