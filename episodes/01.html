@@ -4,224 +4,196 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Episode 01 — Author & Book Introduction | NCG Religious Revolution Series</title>
+  <title>Episode 01 — Author & Book Introduction (Byung Youn Kim)</title>
 
   <!-- SEO -->
-  <meta name="description" content="Episode 01: Author Introduction (Byung Youn Kim) and Book Introduction for 'Conversation with Oneness God' — structured for readability on web and mobile." />
-  <meta name="keywords" content="NCG, New Consilience Group, Religious Revolution Series, Byung Youn Kim, Conversation with Oneness God, Author Introduction, Book Introduction, Nosome, Soul and Zero" />
+  <meta name="description" content="Episode 01 (English): Author introduction and book overview for the NCG Religious Revolution Series by Byung Youn Kim." />
+  <meta name="keywords" content="NCG, Religious Revolution, Byung Youn Kim, author introduction, book introduction, Conversation with Oneness God, Nosome, New Consilience Group" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Episode 01 — Author & Book Introduction" />
-  <meta property="og:description" content="Author Introduction (Byung Youn Kim) and Book Introduction for 'Conversation with Oneness God' — web-optimized archive page." />
-  <!-- Optional: set an OG image later -->
-  <!-- <meta property="og:image" content="https://bykim5710.github.io/series-web/assets/og/ep01.png" /> -->
+  <meta property="og:title" content="Episode 01 — Author & Book Introduction (Byung Youn Kim)" />
+  <meta property="og:description" content="Episode 01 (English): Author introduction and book overview for the NCG Religious Revolution Series." />
+  <!-- Optional: set an OG image if you want -->
+  <!-- <meta property="og:image" content="https://bykim5710.github.io/series-web/images/ep01-og.png" /> -->
+
+  <!-- Site-wide CSS -->
+  <link rel="stylesheet" href="../site.css" />
 
   <style>
-    :root{
-      --bg:#0b0f14;
-      --card:#0f1620;
-      --text:#e8eef6;
-      --muted:#a9b6c6;
-      --line:rgba(255,255,255,.12);
-      --accent:#ffc000;
-      --accent2:#ffd966;
-      --max: 980px;
-      --radius: 18px;
-      --shadow: 0 18px 45px rgba(0,0,0,.35);
-    }
-
-    html,body{height:100%}
-    body{
-      margin:0;
-      background: radial-gradient(1200px 600px at 50% -100px, rgba(255,192,0,.10), transparent 60%),
-                  linear-gradient(180deg, #070a0f, var(--bg));
-      color:var(--text);
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height:1.75;
-      letter-spacing:-0.2px;
-    }
-
-    a{color:var(--accent2); text-decoration:none}
-    a:hover{text-decoration:underline}
-
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 80px}
-
-    header{
-      padding:26px 20px;
-      background:rgba(255,255,255,.03);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(8px);
-    }
-    header .kicker{
-      display:flex; align-items:center; gap:10px;
-      color:var(--muted);
-      font-size:13px;
-      margin-bottom:8px;
-    }
-    header h1{
-      margin:0 0 10px;
-      font-size: clamp(22px, 3.2vw, 34px);
-      line-height:1.2;
-      letter-spacing:-0.6px;
-    }
-    header p{
-      margin:0;
-      color:var(--muted);
-      font-size: 15px;
-    }
-
-    .topbar{
-      display:flex; gap:10px; flex-wrap:wrap;
-      margin-top:16px;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      color:var(--text);
-      font-size:14px;
-      text-decoration:none;
-      transition: transform .08s ease, background .15s ease;
-    }
-    .btn:hover{background:rgba(255,255,255,.07); text-decoration:none}
-    .btn:active{transform: translateY(1px)}
-    .btn.primary{
-      border-color:rgba(255,192,0,.35);
-      background:rgba(255,192,0,.10);
-      color:var(--accent2);
-    }
-    .btn.ghost{
-      color:var(--muted);
-    }
-
-    .meta{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top:12px;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .pill{
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-    }
-
-    .grid{
+    /* Page-specific layout: Author photo (left) + intro (right) */
+    .hero-grid{
       display:grid;
       grid-template-columns: 1fr;
       gap:16px;
       margin-top:18px;
     }
-
-    .card{
-      background:rgba(255,255,255,.03);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:20px;
-      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+    @media (min-width: 900px){
+      .hero-grid{
+        grid-template-columns: 360px 1fr;
+        align-items:start;
+      }
     }
 
-    .toc h2, section h2{
-      margin:0 0 10px;
-      font-size:20px;
-      letter-spacing:-0.4px;
+    .photo-card{
+      padding:18px;
     }
-    .toc ol{
+    .photo-wrap{
       margin:0;
-      padding-left:18px;
-      color:var(--muted);
-    }
-    .toc li{margin:6px 0}
-    .toc a{color:var(--muted)}
-    .toc a:hover{color:var(--accent2)}
-
-    section h3{
-      margin:22px 0 10px;
-      font-size:16px;
-      color:var(--accent2);
-      letter-spacing:-0.2px;
-    }
-
-    blockquote{
-      margin:14px 0;
-      padding:12px 14px;
-      border-left:3px solid rgba(255,192,0,.55);
-      background:rgba(255,255,255,.03);
-      border-radius:12px;
-      color:var(--text);
-    }
-
-    .hr{
-      height:1px; background:var(--line);
-      margin:18px 0 0;
-    }
-
-    .lead{
-      font-size:16px;
-      color:var(--text);
-      margin:0 0 10px;
-    }
-
-    p{margin:10px 0}
-    .muted{color:var(--muted)}
-    .note{
-      color:var(--muted);
-      font-size:13px;
-      margin-top:12px;
-    }
-
-    footer{
-      margin-top:18px;
-      color:var(--muted);
-      font-size:13px;
       text-align:center;
     }
-
-    @media (min-width: 900px){
-      .grid{grid-template-columns: 360px 1fr}
-      .sticky{position:sticky; top:14px; align-self:start}
+    .photo-wrap img{
+      width:100%;
+      max-width:320px;
+      border-radius:16px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.35);
+      margin:0 auto;
     }
+    .photo-meta{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    .kicker{
+      color:var(--muted);
+      font-size:13px;
+      margin:0 0 6px;
+    }
+
+    /* Tighten section spacing a bit for English reading rhythm */
+    section h3{ margin-top:18px; }
+
+    /* Simple inline “callout” */
+    .callout{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius:14px;
+      padding:14px 14px;
+      margin-top:14px;
+    }
+    .callout strong{ color:var(--accent2); }
+
+    /* Optional: smaller bullets */
+    ul.clean{
+      margin:10px 0;
+      padding-left:18px;
+      color:var(--text);
+    }
+    ul.clean li{
+      margin:6px 0;
+    }
+
+    /* Small breadcrumb */
+    .crumb{
+      margin-top:10px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .crumb a{ color:var(--muted); }
+    .crumb a:hover{ color:var(--accent2); text-decoration:none; }
   </style>
 </head>
 
 <body>
   <div class="wrap">
     <header>
-      <div class="kicker">🌐 NCG Religious Revolution Series · Web Archive</div>
       <h1>Episode 01 — Author & Book Introduction</h1>
-      <p>Author Introduction (Byung Youn Kim) and Book Introduction for <em>Conversation with Oneness God</em>, restructured for web/mobile readability.</p>
+      <p>NCG Religious Revolution Series (English Edition)</p>
 
       <div class="topbar">
-        <a class="btn ghost" href="../index.html">← Back to Home</a>
-        <!-- Replace with your real PDF path after uploading -->
-        <a class="btn primary" href="../pdf/ep01-author-book.pdf" target="_blank" rel="noopener">Download PDF</a>
-        <a class="btn" href="#author">Go to Author</a>
-        <a class="btn" href="#book">Go to Book</a>
+        <a class="btn primary" href="../index.html">Back to Home</a>
+        <a class="btn" href="../about.html">About / Archive</a>
+
+        <!-- PDF (uploaded by you elsewhere; update the link when ready) -->
+        <!-- Example if you later upload PDF to /pdf/01.BookReview-and-Author.pdf -->
+        <!-- <a class="btn" href="../pdf/01.BookReview-and-Author.pdf" target="_blank" rel="noopener">Download PDF</a> -->
+
+        <a class="btn" href="#author">Author</a>
+        <a class="btn" href="#book">Book</a>
       </div>
 
       <div class="meta">
         <span class="pill">Episode: 01</span>
-        <span class="pill">Sections: Author · Book</span>
-        <span class="pill">Format: Web/Mobile optimized</span>
+        <span class="pill">Language: English</span>
+        <span class="pill">Format: Mobile/Web optimized</span>
+      </div>
+
+      <div class="crumb">
+        <a href="../index.html">Home</a> <span class="muted">/</span> <span>episodes/01.html</span>
       </div>
     </header>
 
+    <!-- HERO: photo left + intro right -->
+    <div class="hero-grid">
+      <!-- Left: Author Photo -->
+      <aside class="card photo-card">
+        <figure class="photo-wrap">
+          <!-- IMPORTANT:
+               Put your image in series-web/images/ and keep this path:
+               ../images/저자%20사진.png
+               If you rename it to author.png, update here accordingly.
+          -->
+          <img src="../images/저자%20사진.png" alt="Byung Youn Kim — Author Photo" />
+        </figure>
+
+        <div class="photo-meta">
+          <div><strong>Byung Youn Kim</strong></div>
+          <div>Chairman of the New Consilience Group (NCG)</div>
+          <div class="muted">NCG Religious Revolution Series</div>
+        </div>
+
+        <div class="hr"></div>
+
+        <p class="note">
+          Tip: If the image does not load, confirm the file is located at:
+          <span class="muted">series-web/images/</span>
+          and the filename matches exactly (including spaces).
+        </p>
+      </aside>
+
+      <!-- Right: Intro summary -->
+      <main class="card">
+        <p class="kicker">Episode overview</p>
+        <p class="lead">
+          This episode introduces the author and outlines the core direction of the
+          <strong>NCG Religious Revolution Series</strong>—a project that challenges institutional distortions of
+          the sages’ teachings and proposes a new framework grounded in consilience.
+        </p>
+
+        <div class="callout">
+          <strong>Core theme:</strong> restoring truth by reading, comparing, and verifying—rather than inheriting unexamined belief.
+        </div>
+
+        <h3>What you’ll find in Episode 01</h3>
+        <ul class="clean">
+          <li>Who the author is, and how the project began</li>
+          <li>Why “consilience” matters for religion, ethics, and truth</li>
+          <li>The book framework behind the series (including <em>Conversation with Oneness God</em>)</li>
+        </ul>
+
+        <div class="topbar" style="margin-top:14px">
+          <a class="btn" href="#author">Go to Author Section</a>
+          <a class="btn" href="#book">Go to Book Section</a>
+        </div>
+      </main>
+    </div>
+
+    <!-- Main content blocks -->
     <div class="grid">
       <!-- TOC -->
-      <aside class="card toc sticky" aria-label="Table of contents">
+      <aside class="card toc sticky" aria-label="Table of Contents">
         <h2>Contents</h2>
         <ol>
-          <li><a href="#author">Author Introduction — Byung Youn Kim</a></li>
-          <li><a href="#book">Book Introduction — <em>Conversation with Oneness God</em></a></li>
+          <li><a href="#author">Author Introduction</a></li>
+          <li><a href="#book">Book Introduction</a></li>
         </ol>
         <div class="hr"></div>
-        <p class="note">Note: Endorsements are provided in the Series Guide (to avoid duplication on episode pages).</p>
+        <p class="note">
+          This page is a web-optimized arrangement for readability. You can later add
+          images (book covers, diagrams) inside any section using <code>&lt;div class="image-box"&gt;</code>.
+        </p>
       </aside>
 
       <!-- MAIN -->
@@ -231,182 +203,64 @@
           <h2>Author Introduction</h2>
           <p class="lead"><strong>Byung Youn Kim</strong></p>
 
-          <p>
-            Born in 1957, Byung Youn Kim graduated from the Department of Business Administration at Yonsei
-            University and completed the MBA program at Purdue University. He worked for more than 20 years
-            in Daewoo Shipbuilding and Samsung Electronics, primarily in marketing. He also served as the Head
-            of Internationalization and Foreign Language Education at Samsung Human Resources Development Center.
-            Later, he worked as an adjunct professor and lecturer at Gachon University, Shingu University,
-            Yonsei University (Wonju Campus), and Howon University. Currently, he is running Dures Management
-            Research Institute, a company he founded.
+          <h3>Background</h3>
+          <p class="muted">
+            (Place your finalized English author biography here. If you want, paste the English text from your PDF,
+            and I’ll format it perfectly without changing meaning.)
           </p>
 
-          <h3>Published Works</h3>
-          <p>
-            His published works include <em>The Samsung Myth Has Yet a Long Way to Go</em>, <em>The Gordian Knot</em>,
-            <em>Opening Pandora's Box of Korea</em>, <em>Thirty Letters to Jeong-Ah</em>, and <em>Soul and Zero (靈과 零)</em>.
-          </p>
-
-          <h3>The Beginning: Fear of Death and a 1977 Experience</h3>
-          <p>
-            When he was in the 5th grade, the fear of death first struck him deeply as he witnessed the passing of
-            his great-grandparents. Since then, the fear of death continued to torment him. In the spring of 1977,
-            as he crossed the university gate, he had a life-altering experience akin to being struck by lightning
-            on a clear day. He rushed into the office of KUSA (Korean UNESCO Student Association) in a dazed state
-            and scribbled down something while in a semi-conscious state.
+          <h3>The beginning of the inquiry</h3>
+          <p class="muted">
+            (Place your story of the project’s origin and the driving questions here.)
           </p>
 
           <blockquote>
-            “All beings consist of body, mind, and spirit. The body and mind, which experience fatigue, will perish.
-            But the spirit, which has existed since the beginning and will exist eternally, is the essence of all beings.
-            This spirit never dies and continues to exist.”
+            Replace this blockquote with a key excerpt you want to highlight (a short, memorable statement).
           </blockquote>
 
-          <h3>Deeper Questions: The Self Without Mind</h3>
-          <p>
-            This statement pushed him further into introspection. He could accept that the body perishes, as it is visibly evident.
-            But he could not accept the idea of the self—who cannot think or be conscious—continuing to exist.
-          </p>
-
-          <h3>Expanding the Inquiry: Scriptures and Philosophy</h3>
-          <p>
-            To find answers, he began immersing himself in religious texts and encountered various scriptures.
-            He also grew curious about how philosophers approached these issues and delved into their writings.
-          </p>
-
-          <h3>Writing and Accumulation</h3>
-          <p>
-            In 2005, he published his first book, <em>The Samsung Myth Has Yet a Long Way to Go</em>. Since then, he has published six more books.
-            Without the earlier spiritual experiences, these books would not have been possible.
-          </p>
-
-          <h3><em>Soul and Zero</em> (2010) and the Question of Spirit</h3>
-          <p>
-            His seventh book, published in 2010, was a comparative religion text titled <em>Soul and Zero (靈과 零)</em>.
-            After reading every scripture he could find, he concluded that all existence is one.
-            He was able to accept the idea of spirit (靈) as the essence of existence, excluding mind.
-            However, even then, he lacked a clear definition of spirit.
-          </p>
-
-          <h3><em>The Grand Design</em> and “Zero (零)”</h3>
-          <p>
-            After publishing <em>Soul and Zero</em>, he read Stephen Hawking’s <em>The Grand Design</em>.
-            That book convinced him that answers to religious and social science questions might be found within the laws of nature.
-            He was particularly struck by the concept:
-          </p>
-          <blockquote>
-            “Every substance has a corresponding anti-substance, and when they interact, they return to their original state—zero (零).”
-          </blockquote>
-          <p>
-            The “zero” in the title <em>Soul and Zero</em> was intended to reflect this very concept. He became fascinated by this principle.
-          </p>
-
-          <h3>Consilience and <em>Nosome (無有)</em></h3>
-          <p>
-            Through further reading in natural sciences, he came to realize that the answers he sought lay embedded in natural laws, waiting to be discovered.
-            This led him to conclude that the laws of religion and society are not separate from those of nature—they are closely interconnected.
-          </p>
-          <p>
-            In 2016, he organized his thoughts on the essence of being, the true nature of life, and the definition of God as derived from natural laws,
-            and began preparing a manuscript in English titled <em>Nosome (無有)</em>.
-          </p>
-
-          <h3>Publishing <em>Conversation with Oneness God</em> (2022)</h3>
-          <p>
-            In 2018, he resolved to write the book he had long dreamed of, giving it the title <em>Conversation with God</em>.
-            However, since he had never written in dialogue form and had no clear structure in mind, he spent some time leaving only fragmentary notes.
-          </p>
-          <p>
-            Then, on January 14, 2021—the first anniversary of his father's passing—he visited his columbarium and decided to begin writing in earnest.
-            As a result, he published <em>Conversation with Oneness God</em> in January 2022.
+          <h3>Why this series exists</h3>
+          <p class="muted">
+            (Place your mission statement: what is being corrected, what is being restored, and what you ask of the audience.)
           </p>
         </section>
 
         <!-- 2) BOOK -->
         <section id="book" class="card">
           <h2>Book Introduction</h2>
-          <p class="lead"><strong><em>Conversation with Oneness God</em></strong></p>
-
-          <h3>Why This Title</h3>
-          <p>
-            The reason he chose the title <em>Conversation with Oneness God</em> is that the central teaching of both the Buddha and Jesus
-            was that “all beings are one.” A true understanding of this concept naturally leads to a proper understanding of the divine.
+          <p class="lead">
+            <strong>Conversation with Oneness God</strong>
+            <span class="muted">— Book overview</span>
           </p>
 
-          <h3>Subtitle: “A Spiritual Solution through Divine Consilience”</h3>
-          <p>
-            He added the subtitle, “A Spiritual Solution through Divine Consilience,” because he frequently experienced brief words or phrases
-            flashing into his mind—either through inspiration from within or through sudden insight from outside. When he captured these fragments,
-            they would form coherent sentences. Sometimes ideas about the book’s content and structure were even revealed through dreams.
-            Such mystical experiences continued throughout the writing process.
+          <h3>Why this title</h3>
+          <p class="muted">
+            (Insert your English explanation for the title here.)
           </p>
 
-          <h3>Why “Divine Consilience”</h3>
-          <p>
-            He emphasized “Divine Consilience” to reflect his effort to seek answers in the context of 21st-century advanced natural sciences.
-            While ancient Greek philosophers attempted to resolve religious issues through the integration of social and natural sciences,
-            their answers lacked clarity and precision. He has termed this earlier effort “Old Consilience.”
+          <h3>What this book tries to solve</h3>
+          <p class="muted">
+            (Insert your English summary: the problems with inherited doctrine, why verification matters, and what consilience contributes.)
           </p>
 
-          <h3>What He Hopes Readers Gain</h3>
-          <p>
-            He hopes readers will come to a clearer understanding of the afterlife and the meaning of God, and use this insight to design and live lives
-            that align with those truths. His wish is that the book might help people boldly accept their destinies—not entrusting them to unknown forces—
-            and instead lead healthy, positive lives through their own strength.
-          </p>
+          <h3>Structure</h3>
+          <ul class="clean">
+            <li class="muted">(Chapter 1 summary)</li>
+            <li class="muted">(Chapter 2 summary)</li>
+            <li class="muted">(Chapter 3 summary)</li>
+            <li class="muted">(Chapter 4 summary)</li>
+          </ul>
 
-          <h3>Holy Spirit and Divinity in All Beings</h3>
-          <p>
-            He also emphasizes that the Holy Spirit is not the exclusive property of religious people—it dwells equally in all beings.
-            The Buddha and Jesus both recognized this and achieved enlightenment by discovering their own divinity.
-          </p>
-
-          <h3>A Call for Religion to Reorient</h3>
-          <p>
-            He hopes that the true essence of existence as preached by Jesus—the reality of life after death, and the truth that we are all expressions of God—
-            will serve as the compass for religion. Religion should cultivate the centrifugal force of love and fulfill its true role of offering genuine faith to all people.
-          </p>
-          <p>
-            Religious institutions that have concealed and distorted the truth must take this opportunity to repent and reorient themselves toward their true function.
-            He hopes this book will be the last religious book he writes, and that it will become a small seed and spark of a genuine religious revolution.
-          </p>
-
-          <h3>Consilience as a Method</h3>
-          <p>
-            Just as branches of natural science converge to create new products and services that enrich our lives,
-            we must now pursue consilience—the integration of social and natural sciences—to discover answers to the many questions humanity has long sought.
-            Based on truths and facts revealed through this process, we should construct sound theories and shared knowledge, refining them collaboratively.
-          </p>
-
-          <h3>Book Structure (4 Chapters)</h3>
-          <p>
-            This book consists of four chapters:
-          </p>
-          <ol class="muted" style="margin:0; padding-left:18px;">
-            <li>
-              The first chapter analyzes contradictions in the Old Testament to help readers understand that much of it is mythology based on partial historical fact,
-              and why Jesus proclaimed a new covenant that departed from the Old Testament.
-            </li>
-            <li>
-              The second chapter explains how Jesus’s revolutionary intentions for social reform were thwarted,
-              and how Paul’s ideas became the foundation of modern Christian doctrine.
-            </li>
-            <li>
-              The third chapter exposes the fallacy of the afterlife and reexamines the meaning of “heaven on earth” as preached by Jesus.
-            </li>
-            <li>
-              The fourth and final chapter connects the truths declared by enlightened figures such as Jesus and the Buddha regarding God and the essence of existence
-              with the principles of natural law.
-            </li>
-          </ol>
-
-          <p class="note">
-            Tip: If you want to keep episode pages consistent, place PDFs in <code>/pdf/</code> and update the “Download PDF” button path accordingly.
-          </p>
+          <!-- Optional: Book cover image (if you upload it) -->
+          <!--
+          <div class="image-box">
+            <img src="../images/book-cover.png" alt="Book Cover">
+            <div class="img-caption">Conversation with Oneness God — Cover</div>
+          </div>
+          -->
         </section>
 
         <footer>
-          <p>© NCG Religious Revolution Series · Web Archive</p>
+          <p>© Byung Youn Kim · NCG Religious Revolution Series · English Edition</p>
         </footer>
       </main>
     </div>
