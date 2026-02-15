@@ -1,162 +1,245 @@
-/* =========================
-   NCG / series-web (shared)
-   ========================= */
+/* =========================================================
+   NCG Religious Revolution Web Archive - English site.css
+   - Dark theme, gold accent, readable typography
+   - Mobile-first + desktop 2-column layout
+   ========================================================= */
 
+/* ---------- CSS Variables ---------- */
 :root{
-  --bg0:#05070b;
-  --bg1:#0b1020;
-  --card:rgba(18,24,38,.78);
-  --card2:rgba(18,24,38,.55);
-  --stroke:rgba(255,255,255,.10);
+  --bg:#0b0f14;
+  --bg2:#070a0f;
+  --card:rgba(255,255,255,.03);
+  --text:#e8eef6;
+  --muted:#a9b6c6;
+  --line:rgba(255,255,255,.12);
 
-  --text:#e9eef7;
-  --muted:#a8b3c7;
-
-  --accent:#ffc000;      /* gold */
-  --accent2:#ffde66;     /* lighter gold */
-  --shadow:0 22px 70px rgba(0,0,0,.55);
-  --radius:18px;
+  --accent:#ffc000;     /* main gold */
+  --accent2:#ffd966;    /* softer gold */
+  --btnbg:rgba(255,255,255,.04);
 
   --max:980px;
+  --radius:18px;
+
+  --shadow: 0 10px 28px rgba(0,0,0,.35);
+}
+
+/* ---------- Base ---------- */
+html, body{height:100%}
+body{
+  margin:0;
+  background: linear-gradient(180deg, var(--bg2), var(--bg));
+  color:var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height:1.75;
+  letter-spacing:-0.2px;
 }
 
 *{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif;
-  color:var(--text);
-  background:
-    radial-gradient(1200px 800px at 50% 10%, rgba(255,192,0,.08), transparent 55%),
-    radial-gradient(900px 700px at 10% 70%, rgba(90,170,255,.07), transparent 55%),
-    linear-gradient(180deg, var(--bg0), var(--bg1));
-}
 
-a{color:inherit; text-decoration:none}
-p{line-height:1.65}
-small{color:var(--muted)}
-hr{
-  border:0;
-  border-top:1px solid var(--stroke);
-  margin:18px 0;
+a{
+  color:var(--accent2);
+  text-decoration:none;
 }
+a:hover{ text-decoration:underline; }
 
-.container{
+img{max-width:100%; height:auto; display:block}
+
+/* ---------- Layout ---------- */
+.wrap{
   max-width:var(--max);
   margin:0 auto;
-  padding:56px 18px 80px;
+  padding:28px 18px 80px;
 }
 
-.hero{
-  text-align:center;
-  padding:28px 0 18px;
-}
-.hero .brand{
-  display:flex;
-  gap:10px;
-  align-items:center;
-  justify-content:center;
-  color:rgba(233,238,247,.85);
-  font-size:14px;
-  letter-spacing:.2px;
-}
-.hero h1{
-  margin:14px 0 6px;
-  font-size:40px;
-  letter-spacing:-.5px;
-}
-.hero .subtitle{
-  margin:0 auto;
-  color:var(--muted);
-  max-width:720px;
-  font-size:16px;
-}
-
-.panel{
-  margin:26px auto 0;
-  background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-  border:1px solid var(--stroke);
+header{
+  padding:26px 20px;
+  background: var(--card);
+  border:1px solid var(--line);
   border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:22px 18px;
+  backdrop-filter: blur(8px);
+}
+
+header h1{
+  margin:0 0 10px;
+  font-size: clamp(22px, 3.2vw, 34px);
+  line-height:1.2;
+  letter-spacing:-0.6px;
+}
+
+header p{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
 }
 
 .grid{
   display:grid;
-  gap:14px;
-  grid-template-columns:1fr;
-}
-@media (min-width:720px){
-  .grid{grid-template-columns:1fr 1fr;}
+  grid-template-columns: 1fr;
+  gap:16px;
+  margin-top:18px;
 }
 
+@media (min-width: 900px){
+  .grid{ grid-template-columns: 360px 1fr; }
+  .sticky{ position:sticky; top:14px; align-self:start; }
+}
+
+/* ---------- Cards ---------- */
 .card{
-  background:linear-gradient(180deg, var(--card), var(--card2));
-  border:1px solid var(--stroke);
+  background: var(--card);
+  border:1px solid var(--line);
   border-radius:var(--radius);
-  padding:18px 18px;
-  box-shadow:0 14px 42px rgba(0,0,0,.35);
+  padding:20px;
+  box-shadow: var(--shadow);
 }
 
-/* =========================
-   Real button links
-   ========================= */
-.btn{
+/* ---------- Buttons / Topbar ---------- */
+.topbar{
   display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:16px;
+}
+
+.btn{
+  display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:10px;
-
-  width:100%;
-  padding:18px 18px;
-
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,.12);
-
-  background:rgba(18,24,38,.55);
-  color:var(--accent);
-
-  font-weight:700;
-  font-size:18px;
-  letter-spacing:.2px;
-
-  box-shadow:0 14px 40px rgba(0,0,0,.35);
-
-  transition:transform .12s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease, color .18s ease;
-  user-select:none;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background: var(--btnbg);
+  color:var(--text);
+  font-size:14px;
+  text-decoration:none;
+  transition: transform .05s ease, background .15s ease;
 }
 
 .btn:hover{
-  transform:translateY(-2px);
-  background:rgba(18,24,38,.72);
-  border-color:rgba(255,192,0,.35);
-  box-shadow:0 18px 54px rgba(0,0,0,.45);
-  color:var(--accent2);
+  background: rgba(255,255,255,.07);
+  text-decoration:none;
+}
+.btn:active{ transform: translateY(1px); }
+
+.btn.primary{
+  border-color: rgba(255,192,0,.35);
+  background: rgba(255,192,0,.10);
+  color: var(--accent2);
 }
 
-.btn:active{
-  transform:translateY(0px);
-  box-shadow:0 12px 34px rgba(0,0,0,.40);
-}
-
-.btn:focus{
-  outline:none;
-}
-.btn:focus-visible{
-  outline:2px solid rgba(255,192,0,.55);
-  outline-offset:3px;
-}
-
-.btn .icon{
-  width:22px;
-  height:22px;
-  opacity:.95;
-}
-
-/* small footer */
-.footer{
-  margin-top:22px;
-  text-align:center;
-  color:rgba(168,179,199,.85);
+/* ---------- Meta pills ---------- */
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+  color:var(--muted);
   font-size:13px;
+}
+
+.pill{
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+}
+
+/* ---------- TOC ---------- */
+.toc h2,
+section h2{
+  margin:0 0 10px;
+  font-size:20px;
+  letter-spacing:-0.4px;
+}
+
+.toc ol{
+  margin:0;
+  padding-left:18px;
+  color:var(--muted);
+}
+
+.toc li{ margin:6px 0; }
+
+.toc a{
+  color:var(--muted);
+}
+.toc a:hover{
+  color:var(--accent2);
+  text-decoration:none;
+}
+
+.note{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:12px;
+}
+
+/* ---------- Typography ---------- */
+p{ margin:10px 0; }
+
+.lead{
+  font-size:16px;
+  color:var(--text);
+  margin:0 0 10px;
+}
+
+.muted{ color:var(--muted); }
+
+section h3{
+  margin:22px 0 10px;
+  font-size:16px;
+  color:var(--accent2);
+  letter-spacing:-0.2px;
+}
+
+/* ---------- Blockquote ---------- */
+blockquote{
+  margin:14px 0;
+  padding:12px 14px;
+  border-left:3px solid rgba(255,192,0,.55);
+  background: rgba(255,255,255,.03);
+  border-radius:12px;
+  color:var(--text);
+}
+
+/* ---------- Horizontal rule ---------- */
+.hr{
+  height:1px;
+  background: var(--line);
+  margin:18px 0 0;
+}
+
+/* ---------- Image Box (for author photo / book cover) ---------- */
+.image-box{
+  text-align:center;
+  margin:40px 0;
+}
+
+.image-box img{
+  max-width:100%;
+  border-radius:16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  margin:0 auto;
+}
+
+/* Optional: caption under image */
+.img-caption{
+  margin-top:10px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* ---------- Footer ---------- */
+footer{
+  margin-top:20px;
+  color:var(--muted);
+  font-size:13px;
+  text-align:center;
+}
+
+/* ---------- Small screen polish ---------- */
+@media (max-width: 420px){
+  header{ padding:22px 16px; }
+  .card{ padding:18px; }
+  .btn{ width:100%; }
 }
