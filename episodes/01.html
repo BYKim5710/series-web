@@ -3,97 +3,155 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Episode 01 — Author & Book Introduction (Byung Youn Kim)</title>
 
+  <!-- SEO -->
   <meta name="description" content="Episode 01 (English): Author introduction and book overview for the NCG Religious Revolution Series." />
-  <meta name="keywords" content="NCG, Religious Revolution, Byung Youn Kim, author introduction, book introduction, Conversation with Oneness God, Nosome, New Consilience Group" />
+  <meta name="keywords" content="NCG, Religious Revolution, Byung Youn Kim, author introduction, book introduction, New Consilience Group" />
 
+  <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Episode 01 — Author & Book Introduction (Byung Youn Kim)" />
   <meta property="og:description" content="Episode 01 (English): Author introduction and book overview for the NCG Religious Revolution Series." />
+  <!-- 필요 시 OG 이미지 사용 (레포 경로 주의: 상대경로는 OG에서 불안정하니 repo 포함 절대 URL 권장) -->
+  <!-- <meta property="og:image" content="https://bykim5710.github.io/series-web/images/ep.01-bookcover.png" /> -->
 
+  <!-- Site-wide CSS -->
   <link rel="stylesheet" href="../site.css" />
+
+  <style>
+    /* Page-specific */
+    .hero-grid{display:grid; gap:18px; margin-top:18px;}
+    @media (min-width: 900px){
+      .hero-grid{grid-template-columns: 360px 1fr; align-items:start;}
+    }
+    .photo-card{padding:18px;}
+    .photo-wrap{margin:0; text-align:center;}
+    .photo-wrap img{width:100%; max-width:320px; border-radius:16px; box-shadow:0 10px 28px rgba(0,0,0,.35); display:block; margin:0 auto;}
+    .photo-meta{margin-top:12px; color:var(--muted); font-size:13px; line-height:1.6;}
+    .kicker{color:var(--muted); font-size:13px; margin:0 0 6px;}
+    .btn-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;}
+    .downloads{margin-top:18px; padding-top:14px; border-top:1px solid rgba(255,255,255,.08);}
+  </style>
 </head>
 
 <body>
-  <main class="container">
-    <!-- Header -->
-    <section class="card header">
+  <main class="wrap">
+    <!-- Header card -->
+    <section class="card hero">
       <h1>Episode 01 — Author &amp; Book Introduction</h1>
       <p class="sub">NCG Religious Revolution Series (English Edition)</p>
 
       <div class="nav">
-        <a class="btn primary" href="../index.html">Back to Home</a>
-        <!-- IMPORTANT: English about page -->
-        <a class="btn" href="../about-en.html">About / Archive</a>
-        <a class="btn" href="../about-en.html#author">Author</a>
-        <a class="btn" href="../about-en.html#book">Book</a>
-        <a class="btn" href="../about-en.html#recommendation">Recommendation</a>
+        <!-- ✅ 전부 상대경로로: / 쓰면 404 -->
+        <a class="btn gold" href="../index.html">Back to Home</a>
+        <a class="btn" href="../about.html">About / Archive</a>
+
+        <!-- 페이지 내부 섹션 이동(404 없음) -->
+        <a class="btn" href="#author">Author</a>
+        <a class="btn" href="#book">Book</a>
+        <a class="btn" href="#recommendation">Recommendation</a>
       </div>
 
-      <div class="pills">
-        <span class="pill">Episode: 01</span>
-        <span class="pill">Language: English</span>
-        <span class="pill">Format: Mobile/Web optimized</span>
+      <div class="meta">
+        <span class="tag">Episode: 01</span>
+        <span class="tag">Language: English</span>
+        <span class="tag">Format: Mobile/Web optimized</span>
       </div>
 
-      <p class="small-note">Tip: If you don’t see the latest version, try adding <b>?v=YYYYMMDDHH</b> to the URL and refresh.</p>
+      <p class="tip">Tip: If you don’t see the latest version, add <code>?v=YYYYMMDDHH</code> to the URL and refresh.</p>
     </section>
 
     <!-- Hero grid -->
-    <section class="grid grid-2">
-      <!-- Left: photo -->
+    <section class="hero-grid">
+      <!-- Left: author photo -->
       <aside class="card photo-card">
         <figure class="photo-wrap">
-          <img src="../images/author.png" alt="Byung Youn Kim" />
+          <!-- ✅ 실제 파일명으로 변경 -->
+          <img src="../images/ep.01-writer.png" alt="Byung Youn Kim" />
         </figure>
-
         <div class="photo-meta">
-          <b>Byung Youn Kim</b><br/>
+          <strong>Byung Youn Kim</strong><br/>
           Chairman of the New Consilience Group (NCG)<br/>
           NCG Religious Revolution Series
-          <div class="hr"></div>
-          <div class="small-note">
-            Image location: <code>/images/author.png</code><br/>
-            (If not loading, confirm the file exists in <code>series-web/images/</code>.)
+          <div style="margin-top:10px; opacity:.85;">
+            Image path: <code>../images/ep.01-writer.png</code>
           </div>
         </div>
       </aside>
 
-      <!-- Right: intro -->
-      <section class="card card-pad">
+      <!-- Right: overview -->
+      <section class="card">
         <p class="kicker">Episode overview</p>
-        <h2 class="section-title">What this episode covers</h2>
+        <h2>What this episode covers</h2>
 
         <div class="callout">
-          <b>Core direction:</b> restoring truth by reading, comparing, and verifying —
-          rather than inheriting unexamined belief.
+          <strong>Core direction:</strong> restoring truth by reading, comparing, and verifying — rather than inheriting unexamined belief.
         </div>
 
-        <ul>
+        <h3 style="margin-top:16px;">You will find in Episode 01</h3>
+        <ul class="bullets">
           <li>Who the author is, and how the project began</li>
           <li>Why “consilience” matters for religion, ethics, and truth</li>
-          <li>The book framework behind the series (including <i>Conversation with Oneness God</i>)</li>
+          <li>The book framework behind the series</li>
         </ul>
 
-        <div class="nav" style="margin-top:14px;">
-          <a class="btn" href="../about-en.html#author">Go to Author Section</a>
-          <a class="btn" href="../about-en.html#book">Go to Book Section</a>
+        <div class="btn-row">
+          <a class="btn" href="#author">Go to Author Section</a>
+          <a class="btn" href="#book">Go to Book Section</a>
         </div>
 
-        <div class="hr"></div>
-
-        <p class="kicker">Downloads</p>
-        <div class="nav">
-          <a class="btn primary" href="../pdf/01.BookReview-and-Author.pdf" target="_blank" rel="noopener">PDF: Author & Book (EN)</a>
-          <a class="btn" href="../pdf/1-1-Recommendation.pdf" target="_blank" rel="noopener">PDF: Recommendation (EN)</a>
+        <div class="downloads">
+          <p class="kicker">Downloads</p>
+          <!-- ⚠️ PDF가 레포에 업로드된 실제 위치로 href를 맞춰야 합니다 -->
+          <a class="btn gold" href="../pdf/01.BookReview-and-Author-EN.pdf">PDF: Author &amp; Book (EN)</a>
+          <a class="btn" href="../pdf/01.Recommendation-EN.pdf">PDF: Recommendation (EN)</a>
+          <p class="tip">If your PDFs are not in <code>/pdf/</code>, tell me the exact folder + filenames and I’ll match the links.</p>
         </div>
-
-        <p class="small-note">
-          If your PDFs are not in <code>/pdf/</code>, tell me where you uploaded them and I’ll match the links exactly.
-        </p>
       </section>
     </section>
+
+    <!-- Author section -->
+    <section id="author" class="card section">
+      <h2>Author</h2>
+      <p class="kicker">Author introduction</p>
+      <p>
+        (Paste or summarize your English author introduction here. If you want, upload the final English text and I’ll format it cleanly.)
+      </p>
+    </section>
+
+    <!-- Book section -->
+    <section id="book" class="card section">
+      <h2>Book</h2>
+      <p class="kicker">Book introduction</p>
+
+      <div style="display:grid; gap:16px; align-items:start;">
+        <div style="max-width:420px;">
+          <!-- ✅ 책 이미지 -->
+          <img src="../images/ep.01-bookcover.png" alt="Book cover" style="width:100%; border-radius:16px; box-shadow:0 10px 28px rgba(0,0,0,.35);" />
+          <p class="tip" style="margin-top:8px;">Image path: <code>../images/ep.01-bookcover.png</code></p>
+        </div>
+        <div>
+          <p>
+            (Paste or summarize your English book introduction here.)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation section -->
+    <section id="recommendation" class="card section">
+      <h2>Recommendation</h2>
+      <p class="kicker">Recommendation / Endorsement</p>
+      <p>
+        (Paste your English recommendation text here, or link to the PDF above.)
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>© NCG — New Consilience Group</p>
+    </footer>
   </main>
 </body>
 </html>
