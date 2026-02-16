@@ -204,7 +204,14 @@ nav{
   .hero-grid{
     grid-template-columns:1fr;
   }
-  .coverbox{
-    height:300px;
-  }
+}
+
+/* Episode hero caption: keep inside the card width */
+.hero .card .imgcap{
+  position: relative;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  box-sizing: border-box;
+  margin: 12px 0 0 0;
 }
