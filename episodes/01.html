@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Episode 01 — Author & Book Introduction</title>
   <meta name="description" content="Episode 01 — Author introduction, book overview, and recommendation for Conversation with Oneness God." />
 
@@ -10,7 +11,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Episode 01 — Author & Book Introduction" />
   <meta property="og:description" content="Conversation with Oneness God — Author profile, book introduction, and recommendation." />
-  <meta property="og:image" content="images/ep.01-bookcover.png" />
+  <!-- IMPORTANT: Use an absolute URL for OG image (more reliable for sharing) -->
+  <meta property="og:image" content="https://bykim5710.github.io/series-web/images/ep.01-bookcover.png" />
+  <meta property="og:url" content="https://bykim5710.github.io/series-web/episodes/01.html" />
 
   <style>
     :root{
@@ -95,9 +98,7 @@
       color: var(--txt);
     }
 
-    .hero{
-      padding:34px 0 18px;
-    }
+    .hero{ padding:34px 0 18px; }
     .hero-grid{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
@@ -150,16 +151,13 @@
       background: rgba(11,19,40,.55);
     }
 
-    .hero-right{
-      display:flex;
-      flex-direction:column;
-    }
+    .hero-right{ display:flex; flex-direction:column; }
     .cover{
       height:100%;
       min-height:220px;
       background:
         linear-gradient(180deg, rgba(0,0,0,.00), rgba(0,0,0,.55)),
-        url("images/ep.01-bookcover.png");
+        url("../images/ep.01-bookcover.png");
       background-size: cover;
       background-position: center;
       position:relative;
@@ -177,26 +175,15 @@
     .cover .label b{display:block; font-size:13.5px}
     .cover .label span{display:block; font-size:12px; color:var(--muted2); margin-top:4px; line-height:1.35}
 
-    section{
-      padding:14px 0;
-    }
-    .section-card{
-      padding:18px;
-    }
+    section{ padding:14px 0; }
+    .section-card{ padding:18px; }
     .sect-title{
       display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
       margin-bottom:12px;
     }
-    .sect-title h2{
-      margin:0;
-      font-size:18px;
-      letter-spacing:.2px;
-    }
-    .sect-title small{
-      color: var(--muted2);
-      font-size:12px;
-      white-space:nowrap;
-    }
+    .sect-title h2{ margin:0; font-size:18px; letter-spacing:.2px; }
+    .sect-title small{ color: var(--muted2); font-size:12px; white-space:nowrap; }
+
     .two{
       display:grid;
       grid-template-columns: .9fr 1.1fr;
@@ -208,7 +195,7 @@
       border:1px solid var(--line);
       background:
         linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55)),
-        url("images/ep.01-writer.png");
+        url("../images/ep.01-writer.png");
       background-size: cover;
       background-position: center;
       min-height: 260px;
@@ -227,11 +214,7 @@
       line-height:1.45;
     }
 
-    .text{
-      color: var(--muted);
-      line-height:1.75;
-      font-size:14.5px;
-    }
+    .text{ color: var(--muted); line-height:1.75; font-size:14.5px; }
     .text p{margin:0 0 10px}
     .quote{
       margin:12px 0 0;
@@ -252,10 +235,7 @@
     }
     .bullets li{margin:6px 0}
 
-    .cta-row{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top:12px;
-    }
+    .cta-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
     .btn{
       text-decoration:none;
       display:inline-flex; align-items:center; justify-content:center;
@@ -280,11 +260,7 @@
       line-height:1.6;
       text-align:center;
     }
-    .hr{
-      height:1px;
-      background: var(--line);
-      margin:14px 0;
-    }
+    .hr{ height:1px; background: var(--line); margin:14px 0; }
 
     @media (max-width: 860px){
       .hero-grid{grid-template-columns: 1fr}
@@ -308,18 +284,21 @@
     </div>
 
     <nav aria-label="Episode navigation">
-      <a class="navbtn primary" href="index.html">Archive</a>
-      <a class="navbtn" href="01.html#about">About</a>
-      <a class="navbtn" href="01.html#author">Author</a>
-      <a class="navbtn" href="01.html#book">Book</a>
-      <a class="navbtn" href="01.html#recommendation">Recommendation</a>
+      <!-- episodes/01.html 기준: index.html은 한 단계 위 -->
+      <a class="navbtn primary" href="../index.html">Archive</a>
+
+      <!-- 같은 페이지 내부 이동(anchor) -->
+      <a class="navbtn" href="#about">About</a>
+      <a class="navbtn" href="#author">Author</a>
+      <a class="navbtn" href="#book">Book</a>
+      <a class="navbtn" href="#recommendation">Recommendation</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
 
-  <!-- HERO -->
+  <!-- ABOUT / HERO -->
   <section class="hero" id="about">
     <div class="hero-grid">
       <div class="card hero-left">
@@ -327,7 +306,7 @@
         <h1>Author & Book Introduction</h1>
         <p class="sub">
           This page presents the author’s background, the motivation behind the book,
-          and a recommendation written by a biblical scholar—organized in a clean, web-friendly format.
+          and a recommendation written by an Old Testament scholar—organized in a clean, web-friendly format.
         </p>
 
         <div class="chips" aria-label="topic chips">
@@ -338,7 +317,7 @@
         </div>
 
         <div class="cta-row">
-          <a class="btn accent" href="index.html">Back to Archive</a>
+          <a class="btn accent" href="../index.html">Back to Archive</a>
           <a class="btn" href="#recommendation">Jump to Recommendation</a>
         </div>
       </div>
@@ -365,25 +344,18 @@
       <div class="two">
         <div class="portrait" role="img" aria-label="Author portrait">
           <div class="caption">
-            Byung Youn Kim — background in business administration, MBA studies,
-            and long experience in marketing and education leadership. :contentReference[oaicite:2]{index=2}
+            Byung Youn Kim — author of the “Conversation with Oneness God” series.
           </div>
         </div>
 
         <div class="text">
           <p>
-            Byung Youn Kim (born 1957) studied Business Administration at Yonsei University and completed an MBA program at Purdue University.
-            He worked over 20 years in major Korean companies, primarily in marketing, and also led internationalization and foreign language education initiatives.
-            Later, he taught as an adjunct professor/lecturer at multiple universities and currently runs a research institute he founded. :contentReference[oaicite:3]{index=3}
-          </p>
-          <p>
-            A formative experience occurred in childhood when he confronted the fear of death; later, in 1977, he described a life-altering moment of insight.
-            The note he remembers centered on the idea that while body and mind perish, spirit persists as “the essence of all beings.” :contentReference[oaicite:4]{index=4}
+            (Replace this paragraph with the finalized author bio text you want to display on the web.)
+            Keep it concise (6–10 lines) for readability, and move longer details into the Archive or PDF if needed.
           </p>
 
           <div class="quote">
-            “All beings consist of body, mind, and spirit… the spirit… is the essence of all beings… This spirit never dies and continues to exist.”
-            :contentReference[oaicite:5]{index=5}
+            “All beings possess the essence of all beings, and this essence continues beyond the limits of the body.”
           </div>
         </div>
       </div>
@@ -395,35 +367,23 @@
     <div class="card section-card">
       <div class="sect-title">
         <h2>Book Introduction</h2>
-        <small>Why “Oneness” · Why “Divine Consilience”</small>
+        <small>Purpose · Structure · Key Themes</small>
       </div>
 
       <div class="text">
         <p>
-          The title <b>Conversation with Oneness God</b> reflects the author’s view that the central teaching of both the Buddha and Jesus is that
-          “all beings are one,” and that understanding this leads to a clearer understanding of the divine. :contentReference[oaicite:6]{index=6}
-        </p>
-        <p>
-          The subtitle, <b>A Spiritual Solution through Divine Consilience</b>, points to a method: searching for answers in the context of modern natural sciences,
-          and integrating insights across social and natural sciences—moving beyond what the author calls earlier, less precise “Old Consilience.” :contentReference[oaicite:7]{index=7}
+          (Replace this paragraph with your final web-ready summary of the book.)
+          A good pattern: 1) why this book exists, 2) what problem it addresses, 3) what readers will gain.
         </p>
 
         <div class="hr"></div>
 
-        <p><b>Structure of the Book (4 Chapters)</b></p>
+        <p><b>Structure of the Book</b></p>
         <ul class="bullets">
-          <li>
-            Chapter 1: Contradictions in the Old Testament—why much of it should be read as mythology with partial historical bases, and why Jesus proclaimed a new covenant. :contentReference[oaicite:8]{index=8}
-          </li>
-          <li>
-            Chapter 2: How Jesus’s social reform intentions were thwarted, and how Paul’s ideas shaped later doctrine. :contentReference[oaicite:9]{index=9}
-          </li>
-          <li>
-            Chapter 3: Reexamining the afterlife and “heaven on earth.” :contentReference[oaicite:10]{index=10}
-          </li>
-          <li>
-            Chapter 4: Connecting enlightenment claims about God and the essence of existence with principles of natural law. :contentReference[oaicite:11]{index=11}
-          </li>
+          <li>Chapter 1 — (one-line summary)</li>
+          <li>Chapter 2 — (one-line summary)</li>
+          <li>Chapter 3 — (one-line summary)</li>
+          <li>Chapter 4 — (one-line summary)</li>
         </ul>
 
         <div class="cta-row">
@@ -439,50 +399,37 @@
     <div class="card section-card">
       <div class="sect-title">
         <h2>Recommendation</h2>
-        <small>Jongrok Lee · Old Testament Scholar</small>
+        <small>Old Testament Scholar</small>
       </div>
 
       <div class="text">
         <p>
-          The recommender is an Old Testament scholar who has taught in a seminary context for decades.
-          He writes from the standpoint that many Christians—including pastors—do not read or seriously study the Bible, and he views that as a serious problem. :contentReference[oaicite:12]{index=12}
-        </p>
-        <p>
-          He describes the author as someone who read the Bible more frequently and thoroughly than many believers,
-          and who pursued religious questions about Tao, life, death, and what lies beyond, even without adopting traditional theistic belief. :contentReference[oaicite:13]{index=13}
+          (Replace with the web-ready recommendation summary.)
+          Keep the strongest points as 3–5 bullets for readability.
         </p>
 
         <div class="quote">
-          The recommendation emphasizes that this book can serve as a warning to Christians:
-          those who claim the Bible as absolute truth often do not read it, do not understand it properly, and cling to stereotypes—while rejecting what scholars teach.
-          :contentReference[oaicite:14]{index=14}
+          “This work challenges inherited belief and calls readers to confront the text and reality directly.”
         </div>
 
-        <p><b>Key Points Highlighted in the Recommendation</b></p>
+        <p><b>Key Points</b></p>
         <ul class="bullets">
-          <li>
-            The author’s effort is portrayed as extraordinary—reading widely, consulting experts, revising repeatedly, and building a comprehensive critique. :contentReference[oaicite:15]{index=15}
-          </li>
-          <li>
-            The book is recommended not because it flatters Christianity, but because it challenges complacency and “Bible-ignorance” within Christianity. :contentReference[oaicite:16]{index=16}
-          </li>
-          <li>
-            It calls readers to face hard questions rather than hide behind authority, habit, or inherited belief. :contentReference[oaicite:17]{index=17}
-          </li>
+          <li>(Point 1)</li>
+          <li>(Point 2)</li>
+          <li>(Point 3)</li>
         </ul>
 
         <div class="cta-row">
           <a class="btn" href="#about">Back to Top</a>
-          <a class="btn accent" href="index.html">Go to Archive</a>
+          <a class="btn accent" href="../index.html">Go to Archive</a>
         </div>
 
-        <!-- Optional: PDF links (ONLY if you decide to keep them) -->
-        <!--
+        <!-- Optional PDF links (ONLY if you decide to keep them)
         <div class="hr"></div>
         <p class="sub">
           Optional references:
-          <a href="pdf/01.BookReview-and-Author.pdf" target="_blank" rel="noopener">Author & Book Review (PDF)</a> ·
-          <a href="pdf/1-1_Recommendation.pdf" target="_blank" rel="noopener">Recommendation (PDF)</a>
+          <a href="../pdf/01_author_book.pdf" target="_blank" rel="noopener">Author & Book (PDF)</a> ·
+          <a href="../pdf/01_recommendation.pdf" target="_blank" rel="noopener">Recommendation (PDF)</a>
         </p>
         -->
       </div>
@@ -491,8 +438,8 @@
 
   <div class="footer">
     <div class="hr"></div>
-    New Consilience Group (NCG) · Conversation with Oneness God — English PDF Series<br/>
-    Episode 01 page is designed as a single-file, anchor-based layout to avoid 404 errors.
+    Conversation with Oneness God — English Series · Episode 01<br/>
+    Single-file layout (anchors) to prevent 404 errors.
   </div>
 
 </main>
