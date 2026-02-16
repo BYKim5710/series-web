@@ -18,7 +18,7 @@
   --radius2:22px;
 
   /* 전체 레이아웃 폭 */
-  --max:1100px;
+  --max:1000px;
 }
 
 *{box-sizing:border-box}
