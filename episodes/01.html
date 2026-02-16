@@ -11,7 +11,6 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Episode 01 — Author & Book Introduction" />
   <meta property="og:description" content="Conversation with Oneness God — Author profile, book introduction, and recommendation." />
-  <!-- IMPORTANT: Use an absolute URL for OG image (more reliable for sharing) -->
   <meta property="og:image" content="https://bykim5710.github.io/series-web/images/ep.01-bookcover.png" />
   <meta property="og:url" content="https://bykim5710.github.io/series-web/episodes/01.html" />
 
@@ -19,9 +18,7 @@
     :root{
       --bg0:#070A12;
       --bg1:#0B1020;
-      --bg2:#0E1830;
       --card:#0D1630;
-      --card2:#0B1328;
       --line: rgba(255,255,255,.08);
       --txt:#EAF0FF;
       --muted: rgba(234,240,255,.72);
@@ -62,9 +59,7 @@
       align-items:center;
       justify-content:space-between;
     }
-    .brand{
-      display:flex; gap:10px; align-items:center; min-width:220px;
-    }
+    .brand{display:flex; gap:10px; align-items:center; min-width:220px;}
     .dot{
       width:10px; height:10px; border-radius:999px;
       background: radial-gradient(circle at 30% 30%, var(--accent2), var(--accent));
@@ -72,10 +67,7 @@
     }
     .brand b{font-size:14px; letter-spacing:.2px}
     .brand span{display:block; font-size:12px; color:var(--muted2)}
-    nav{
-      display:flex; gap:8px; flex-wrap:wrap;
-      justify-content:flex-end;
-    }
+    nav{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;}
     .navbtn{
       text-decoration:none;
       padding:9px 12px;
@@ -87,24 +79,15 @@
       transition: .18s ease;
       white-space:nowrap;
     }
-    .navbtn:hover{
-      transform: translateY(-1px);
-      border-color: rgba(69,214,255,.35);
-      color: var(--txt);
-    }
+    .navbtn:hover{transform: translateY(-1px); border-color: rgba(69,214,255,.35); color: var(--txt);}
     .navbtn.primary{
       background: linear-gradient(90deg, rgba(69,214,255,.18), rgba(154,230,255,.10));
       border-color: rgba(69,214,255,.35);
       color: var(--txt);
     }
 
-    .hero{ padding:34px 0 18px; }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:16px;
-      align-items:stretch;
-    }
+    .hero{padding:34px 0 18px;}
+    .hero-grid{display:grid; grid-template-columns: 1.15fr .85fr; gap:16px; align-items:stretch;}
     .card{
       background: linear-gradient(180deg, rgba(13,22,48,.86), rgba(11,19,40,.82));
       border:1px solid var(--line);
@@ -129,113 +112,16 @@
       box-shadow: 0 0 16px rgba(230,193,90,.35);
       display:inline-block;
     }
-    h1{
-      margin:14px 0 10px;
-      font-size:28px;
-      line-height:1.2;
-      letter-spacing:.2px;
-    }
-    .sub{
-      margin:0;
-      color: var(--muted);
-      line-height:1.6;
-      font-size:14.5px;
-    }
+    h1{margin:14px 0 10px; font-size:28px; line-height:1.2; letter-spacing:.2px;}
+    .sub{margin:0; color: var(--muted); line-height:1.6; font-size:14.5px;}
     .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
     .chip{
-      font-size:12px;
-      color: var(--muted);
-      padding:7px 10px;
-      border-radius:999px;
+      font-size:12px; color: var(--muted);
+      padding:7px 10px; border-radius:999px;
       border:1px solid var(--line);
       background: rgba(11,19,40,.55);
     }
-
-    .hero-right{ display:flex; flex-direction:column; }
-    .cover{
-      height:100%;
-      min-height:220px;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.00), rgba(0,0,0,.55)),
-        url("../images/ep.01-bookcover.png");
-      background-size: cover;
-      background-position: center;
-      position:relative;
-    }
-    .cover .label{
-      position:absolute;
-      left:16px; bottom:16px;
-      right:16px;
-      padding:12px 14px;
-      border-radius: 14px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(7,10,18,.55);
-      backdrop-filter: blur(8px);
-    }
-    .cover .label b{display:block; font-size:13.5px}
-    .cover .label span{display:block; font-size:12px; color:var(--muted2); margin-top:4px; line-height:1.35}
-
-    section{ padding:14px 0; }
-    .section-card{ padding:18px; }
-    .sect-title{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
-      margin-bottom:12px;
-    }
-    .sect-title h2{ margin:0; font-size:18px; letter-spacing:.2px; }
-    .sect-title small{ color: var(--muted2); font-size:12px; white-space:nowrap; }
-
-    .two{
-      display:grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap:14px;
-      align-items:stretch;
-    }
-    .portrait{
-      border-radius: var(--radius);
-      border:1px solid var(--line);
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55)),
-        url("../images/ep.01-writer.png");
-      background-size: cover;
-      background-position: center;
-      min-height: 260px;
-      position:relative;
-      overflow:hidden;
-    }
-    .portrait .caption{
-      position:absolute; left:14px; right:14px; bottom:14px;
-      padding:10px 12px;
-      border-radius: 14px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(7,10,18,.55);
-      backdrop-filter: blur(8px);
-      font-size:12px;
-      color: var(--muted);
-      line-height:1.45;
-    }
-
-    .text{ color: var(--muted); line-height:1.75; font-size:14.5px; }
-    .text p{margin:0 0 10px}
-    .quote{
-      margin:12px 0 0;
-      padding:14px 14px;
-      border-left: 3px solid rgba(69,214,255,.55);
-      background: rgba(69,214,255,.07);
-      border-radius: 12px;
-      color: var(--txt);
-      line-height:1.65;
-      font-size:14px;
-    }
-    .bullets{
-      margin:10px 0 0;
-      padding-left:18px;
-      color: var(--muted);
-      line-height:1.7;
-      font-size:14.5px;
-    }
-    .bullets li{margin:6px 0}
-
-    .cta-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+    .cta-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
     .btn{
       text-decoration:none;
       display:inline-flex; align-items:center; justify-content:center;
@@ -253,20 +139,68 @@
       background: linear-gradient(90deg, rgba(69,214,255,.18), rgba(154,230,255,.10));
     }
 
-    .footer{
-      padding:24px 0 34px;
-      color: var(--muted2);
-      font-size:12px;
-      line-height:1.6;
-      text-align:center;
+    section{padding:14px 0;}
+    .section-card{padding:18px;}
+    .sect-title{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; margin-bottom:12px;}
+    .sect-title h2{margin:0; font-size:18px; letter-spacing:.2px;}
+    .sect-title small{color: var(--muted2); font-size:12px; white-space:nowrap;}
+
+    .two{display:grid; grid-template-columns: .9fr 1.1fr; gap:14px; align-items:stretch;}
+
+    /* 이미지 크롭 개선: background 대신 <img> 사용 */
+    .imgbox{
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      overflow:hidden;
+      position:relative;
+      min-height:260px;
     }
-    .hr{ height:1px; background: var(--line); margin:14px 0; }
+    .imgbox img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit: cover;            /* 필요시 contain으로 바꿔도 됨 */
+      object-position: center top;  /* 얼굴이 위에 있을 때 잘림 완화 */
+    }
+    .imgcap{
+      position:absolute; left:14px; right:14px; bottom:14px;
+      padding:10px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(7,10,18,.55);
+      backdrop-filter: blur(8px);
+      font-size:12px;
+      color: var(--muted);
+      line-height:1.45;
+    }
+
+    .coverbox{min-height:220px;}
+    .coverbox img{object-position:center;}
+
+    .text{color: var(--muted); line-height:1.75; font-size:14.5px;}
+    .text p{margin:0 0 10px}
+    .quote{
+      margin:12px 0 0;
+      padding:14px 14px;
+      border-left: 3px solid rgba(69,214,255,.55);
+      background: rgba(69,214,255,.07);
+      border-radius: 12px;
+      color: var(--txt);
+      line-height:1.65;
+      font-size:14px;
+    }
+    .bullets{margin:10px 0 0; padding-left:18px; color: var(--muted); line-height:1.7; font-size:14.5px;}
+    .bullets li{margin:6px 0}
+    .hr{height:1px; background: var(--line); margin:14px 0;}
+    .footer{padding:24px 0 34px; color: var(--muted2); font-size:12px; line-height:1.6; text-align:center;}
 
     @media (max-width: 860px){
       .hero-grid{grid-template-columns: 1fr}
       .two{grid-template-columns: 1fr}
       .brand{min-width:auto}
       nav{justify-content:flex-start}
+      .imgbox{min-height:220px;}
     }
   </style>
 </head>
@@ -284,10 +218,7 @@
     </div>
 
     <nav aria-label="Episode navigation">
-      <!-- episodes/01.html 기준: index.html은 한 단계 위 -->
       <a class="navbtn primary" href="../index.html">Archive</a>
-
-      <!-- 같은 페이지 내부 이동(anchor) -->
       <a class="navbtn" href="#about">About</a>
       <a class="navbtn" href="#author">Author</a>
       <a class="navbtn" href="#book">Book</a>
@@ -305,8 +236,8 @@
         <div class="kicker"><i></i><span>Episode 01</span></div>
         <h1>Author & Book Introduction</h1>
         <p class="sub">
-          This page presents the author’s background, the motivation behind the book,
-          and a recommendation written by an Old Testament scholar—organized in a clean, web-friendly format.
+          This page introduces the author, explains why this book was written,
+          and presents a recommendation by an Old Testament scholar—organized in a web-friendly format.
         </p>
 
         <div class="chips" aria-label="topic chips">
@@ -323,10 +254,11 @@
       </div>
 
       <div class="card hero-right">
-        <div class="cover" role="img" aria-label="Book cover image">
-          <div class="label">
-            <b>Conversation with Oneness God</b>
-            <span>A Spiritual Solution through Divine Consilience</span>
+        <div class="imgbox coverbox" role="img" aria-label="Book cover">
+          <img src="../images/ep.01-bookcover.png" alt="Book cover" />
+          <div class="imgcap">
+            <b style="color:var(--txt); display:block; margin-bottom:4px;">Conversation with Oneness God</b>
+            <span style="color:var(--muted2);">A Spiritual Solution through Divine Consilience</span>
           </div>
         </div>
       </div>
@@ -342,21 +274,38 @@
       </div>
 
       <div class="two">
-        <div class="portrait" role="img" aria-label="Author portrait">
-          <div class="caption">
+        <div class="imgbox" role="img" aria-label="Author photo">
+          <img src="../images/ep.01-writer.png" alt="Byung Youn Kim" />
+          <div class="imgcap">
             Byung Youn Kim — author of the “Conversation with Oneness God” series.
           </div>
         </div>
 
         <div class="text">
           <p>
-            (Replace this paragraph with the finalized author bio text you want to display on the web.)
-            Keep it concise (6–10 lines) for readability, and move longer details into the Archive or PDF if needed.
+            Born in 1957, Byung Youn Kim graduated from Yonsei University (Business Administration) and completed the MBA program at Purdue University.
+            He worked for over 20 years at Daewoo Shipbuilding and Samsung Electronics, mainly in marketing, and later served as Head of Internationalization
+            and Foreign Language Education at Samsung Human Resources Development Center.
+          </p>
+          <p>
+            He later taught as an adjunct professor/lecturer at multiple universities, and currently runs Dures Management Research Institute, a company he founded.
+            His published works include <i>The Samsung Myth Has Yet a Long Way to Go</i>, <i>The Gordian Knot</i>, <i>Opening Pandora’s Box of Korea</i>,
+            <i>Thirty Letters to Jeong-Ah</i>, and <i>Soul and Zero (靈과 零)</i>.
+          </p>
+          <p>
+            A childhood encounter with death led him to lifelong inquiry. In 1977, he experienced a life-altering insight and wrote down a statement he still remembers:
           </p>
 
           <div class="quote">
-            “All beings possess the essence of all beings, and this essence continues beyond the limits of the body.”
+            “All beings consist of body, mind, and spirit. The body and mind, which experience fatigue, will perish.
+            But the spirit, which has existed since the beginning and will exist eternally, is the essence of all beings.
+            This spirit never dies and continues to exist.”
           </div>
+
+          <p style="margin-top:12px;">
+            He later pursued answers through scriptures and philosophy, and came to believe that the laws of religion and society are not separate from nature,
+            but closely interconnected—leading him toward a framework he calls “Divine Consilience.”
+          </p>
         </div>
       </div>
     </div>
@@ -372,18 +321,32 @@
 
       <div class="text">
         <p>
-          (Replace this paragraph with your final web-ready summary of the book.)
-          A good pattern: 1) why this book exists, 2) what problem it addresses, 3) what readers will gain.
+          The title <b>Conversation with Oneness God</b> reflects the author’s view that the central teaching of both the Buddha and Jesus is that
+          “all beings are one,” and that a true understanding of this naturally leads to a clearer understanding of the divine.
+        </p>
+        <p>
+          The subtitle, <b>A Spiritual Solution through Divine Consilience</b>, emphasizes the author’s method: seeking answers in the context of
+          21st-century advanced natural sciences, and integrating social and natural sciences beyond what he calls earlier “Old Consilience.”
         </p>
 
         <div class="hr"></div>
 
-        <p><b>Structure of the Book</b></p>
+        <p><b>Author’s intent</b></p>
         <ul class="bullets">
-          <li>Chapter 1 — (one-line summary)</li>
-          <li>Chapter 2 — (one-line summary)</li>
-          <li>Chapter 3 — (one-line summary)</li>
-          <li>Chapter 4 — (one-line summary)</li>
+          <li>To help readers gain a clearer understanding of the afterlife and the meaning of God, and live accordingly.</li>
+          <li>To emphasize that the Holy Spirit is not exclusive to religious people; it dwells equally in all beings.</li>
+          <li>To call religious institutions that concealed or distorted truth to repentance and reorientation toward their true function.</li>
+          <li>To plant a “seed and spark” for a genuine Religious Revolution.</li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <p><b>Structure of the Book (4 Chapters)</b></p>
+        <ul class="bullets">
+          <li><b>Chapter 1</b> — Analyzes contradictions in the Old Testament; argues much of it is mythology based on partial historical fact, and explains why Jesus proclaimed a new covenant distinct from the Old Testament.</li>
+          <li><b>Chapter 2</b> — Explains how Jesus’s revolutionary intentions for social reform were thwarted, and how Paul’s ideas became a foundation of modern Christian doctrine.</li>
+          <li><b>Chapter 3</b> — Exposes the fallacy of the afterlife as commonly taught and reexamines the meaning of “heaven on earth” preached by Jesus.</li>
+          <li><b>Chapter 4</b> — Connects truths declared by enlightened figures such as Jesus and the Buddha regarding God and the essence of existence with principles of natural law.</li>
         </ul>
 
         <div class="cta-row">
@@ -399,39 +362,40 @@
     <div class="card section-card">
       <div class="sect-title">
         <h2>Recommendation</h2>
-        <small>Old Testament Scholar</small>
+        <small>Jongrok Lee (PhD, Old Testament Studies)</small>
       </div>
 
       <div class="text">
         <p>
-          (Replace with the web-ready recommendation summary.)
-          Keep the strongest points as 3–5 bullets for readability.
+          Jongrok Lee, an Old Testament scholar and longtime seminary professor, frames his recommendation around a striking problem:
+          many Christians—including pastors—do not read, study, or properly understand the Bible, relying instead on stereotypes.
         </p>
 
         <div class="quote">
-          “This work challenges inherited belief and calls readers to confront the text and reality directly.”
+          “The people who are supposed to be Bible experts don’t know the Bible… the majority of Christians who hold it up as the absolute truth
+          don’t bother to read it, don’t study it, don’t understand it properly… and reject what biblical scholars teach.”
         </div>
 
-        <p><b>Key Points</b></p>
+        <p style="margin-top:12px;">
+          He describes the author as a lifelong seeker after truth—concerned with Tao, life, death, and what lies beyond—who read the Bible
+          more often and more thoroughly than many believers, pastors, and theologians, and who sought advice from experts to critique it seriously.
+        </p>
+
         <ul class="bullets">
-          <li>(Point 1)</li>
-          <li>(Point 2)</li>
-          <li>(Point 3)</li>
+          <li>He calls the author “lovable and precious” not only as a longtime friend, but as a sincere truth-seeker.</li>
+          <li>He emphasizes the author’s extraordinary effort: extensive reading, many conversations, a huge manuscript, and countless revisions.</li>
+          <li>He recommends the book as a “warning to Christians” to recognize their laziness and ignorance about the Bible.</li>
+          <li>He hopes Christians will read it and awaken to how crude their stereotypes are—precisely because they do not read the text they claim to honor.</li>
         </ul>
+
+        <p style="margin-top:12px;">
+          In closing, he dedicates this recommendation to his friend, “who has chosen to live the life of a hard truth seeker” in order to realize and share the universal Tao.
+        </p>
 
         <div class="cta-row">
           <a class="btn" href="#about">Back to Top</a>
           <a class="btn accent" href="../index.html">Go to Archive</a>
         </div>
-
-        <!-- Optional PDF links (ONLY if you decide to keep them)
-        <div class="hr"></div>
-        <p class="sub">
-          Optional references:
-          <a href="../pdf/01_author_book.pdf" target="_blank" rel="noopener">Author & Book (PDF)</a> ·
-          <a href="../pdf/01_recommendation.pdf" target="_blank" rel="noopener">Recommendation (PDF)</a>
-        </p>
-        -->
       </div>
     </div>
   </section>
