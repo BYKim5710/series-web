@@ -1,157 +1,500 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Episode 01 — Author & Book Introduction</title>
+  <meta name="description" content="Episode 01 — Author introduction, book overview, and recommendation for Conversation with Oneness God." />
 
-  <title>Episode 01 — Author & Book Introduction (Byung Youn Kim)</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Episode 01 (English): Author introduction and book overview for the NCG Religious Revolution Series." />
-  <meta name="keywords" content="NCG, Religious Revolution, Byung Youn Kim, author introduction, book introduction, New Consilience Group" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Episode 01 — Author & Book Introduction (Byung Youn Kim)" />
-  <meta property="og:description" content="Episode 01 (English): Author introduction and book overview for the NCG Religious Revolution Series." />
-  <!-- 필요 시 OG 이미지 사용 (레포 경로 주의: 상대경로는 OG에서 불안정하니 repo 포함 절대 URL 권장) -->
-  <!-- <meta property="og:image" content="https://bykim5710.github.io/series-web/images/ep.01-bookcover.png" /> -->
-
-  <!-- Site-wide CSS -->
-  <link rel="stylesheet" href="../site.css" />
+  <!-- Open Graph (share preview) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Episode 01 — Author & Book Introduction" />
+  <meta property="og:description" content="Conversation with Oneness God — Author profile, book introduction, and recommendation." />
+  <meta property="og:image" content="images/ep.01-bookcover.png" />
 
   <style>
-    /* Page-specific */
-    .hero-grid{display:grid; gap:18px; margin-top:18px;}
-    @media (min-width: 900px){
-      .hero-grid{grid-template-columns: 360px 1fr; align-items:start;}
+    :root{
+      --bg0:#070A12;
+      --bg1:#0B1020;
+      --bg2:#0E1830;
+      --card:#0D1630;
+      --card2:#0B1328;
+      --line: rgba(255,255,255,.08);
+      --txt:#EAF0FF;
+      --muted: rgba(234,240,255,.72);
+      --muted2: rgba(234,240,255,.56);
+      --accent:#45D6FF;
+      --accent2:#9AE6FF;
+      --gold:#E6C15A;
+      --shadow: 0 10px 30px rgba(0,0,0,.45);
+      --radius: 16px;
+      --radius2: 22px;
+      --max: 1100px;
     }
-    .photo-card{padding:18px;}
-    .photo-wrap{margin:0; text-align:center;}
-    .photo-wrap img{width:100%; max-width:320px; border-radius:16px; box-shadow:0 10px 28px rgba(0,0,0,.35); display:block; margin:0 auto;}
-    .photo-meta{margin-top:12px; color:var(--muted); font-size:13px; line-height:1.6;}
-    .kicker{color:var(--muted); font-size:13px; margin:0 0 6px;}
-    .btn-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;}
-    .downloads{margin-top:18px; padding-top:14px; border-top:1px solid rgba(255,255,255,.08);}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--txt);
+      background:
+        radial-gradient(1200px 600px at 70% -10%, rgba(69,214,255,.10), transparent 60%),
+        radial-gradient(900px 500px at 10% 10%, rgba(230,193,90,.08), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1) 45%, var(--bg0));
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(7,10,18,.92), rgba(7,10,18,.55));
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 18px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .brand{
+      display:flex; gap:10px; align-items:center; min-width:220px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: radial-gradient(circle at 30% 30%, var(--accent2), var(--accent));
+      box-shadow: 0 0 18px rgba(69,214,255,.45);
+    }
+    .brand b{font-size:14px; letter-spacing:.2px}
+    .brand span{display:block; font-size:12px; color:var(--muted2)}
+    nav{
+      display:flex; gap:8px; flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .navbtn{
+      text-decoration:none;
+      padding:9px 12px;
+      border:1px solid var(--line);
+      background: rgba(13,22,48,.55);
+      border-radius:999px;
+      font-size:13px;
+      color:var(--muted);
+      transition: .18s ease;
+      white-space:nowrap;
+    }
+    .navbtn:hover{
+      transform: translateY(-1px);
+      border-color: rgba(69,214,255,.35);
+      color: var(--txt);
+    }
+    .navbtn.primary{
+      background: linear-gradient(90deg, rgba(69,214,255,.18), rgba(154,230,255,.10));
+      border-color: rgba(69,214,255,.35);
+      color: var(--txt);
+    }
+
+    .hero{
+      padding:34px 0 18px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(13,22,48,.86), rgba(11,19,40,.82));
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-left{padding:22px}
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:7px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size:12px;
+      letter-spacing:.2px;
+    }
+    .kicker i{
+      width:8px; height:8px; border-radius:999px;
+      background: var(--gold);
+      box-shadow: 0 0 16px rgba(230,193,90,.35);
+      display:inline-block;
+    }
+    h1{
+      margin:14px 0 10px;
+      font-size:28px;
+      line-height:1.2;
+      letter-spacing:.2px;
+    }
+    .sub{
+      margin:0;
+      color: var(--muted);
+      line-height:1.6;
+      font-size:14.5px;
+    }
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+    .chip{
+      font-size:12px;
+      color: var(--muted);
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(11,19,40,.55);
+    }
+
+    .hero-right{
+      display:flex;
+      flex-direction:column;
+    }
+    .cover{
+      height:100%;
+      min-height:220px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.00), rgba(0,0,0,.55)),
+        url("images/ep.01-bookcover.png");
+      background-size: cover;
+      background-position: center;
+      position:relative;
+    }
+    .cover .label{
+      position:absolute;
+      left:16px; bottom:16px;
+      right:16px;
+      padding:12px 14px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(7,10,18,.55);
+      backdrop-filter: blur(8px);
+    }
+    .cover .label b{display:block; font-size:13.5px}
+    .cover .label span{display:block; font-size:12px; color:var(--muted2); margin-top:4px; line-height:1.35}
+
+    section{
+      padding:14px 0;
+    }
+    .section-card{
+      padding:18px;
+    }
+    .sect-title{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin-bottom:12px;
+    }
+    .sect-title h2{
+      margin:0;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .sect-title small{
+      color: var(--muted2);
+      font-size:12px;
+      white-space:nowrap;
+    }
+    .two{
+      display:grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .portrait{
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55)),
+        url("images/ep.01-writer.png");
+      background-size: cover;
+      background-position: center;
+      min-height: 260px;
+      position:relative;
+      overflow:hidden;
+    }
+    .portrait .caption{
+      position:absolute; left:14px; right:14px; bottom:14px;
+      padding:10px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(7,10,18,.55);
+      backdrop-filter: blur(8px);
+      font-size:12px;
+      color: var(--muted);
+      line-height:1.45;
+    }
+
+    .text{
+      color: var(--muted);
+      line-height:1.75;
+      font-size:14.5px;
+    }
+    .text p{margin:0 0 10px}
+    .quote{
+      margin:12px 0 0;
+      padding:14px 14px;
+      border-left: 3px solid rgba(69,214,255,.55);
+      background: rgba(69,214,255,.07);
+      border-radius: 12px;
+      color: var(--txt);
+      line-height:1.65;
+      font-size:14px;
+    }
+    .bullets{
+      margin:10px 0 0;
+      padding-left:18px;
+      color: var(--muted);
+      line-height:1.7;
+      font-size:14.5px;
+    }
+    .bullets li{margin:6px 0}
+
+    .cta-row{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:12px;
+    }
+    .btn{
+      text-decoration:none;
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background: rgba(11,19,40,.55);
+      color: var(--txt);
+      font-size:13px;
+      transition: .18s ease;
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(69,214,255,.35)}
+    .btn.accent{
+      border-color: rgba(69,214,255,.40);
+      background: linear-gradient(90deg, rgba(69,214,255,.18), rgba(154,230,255,.10));
+    }
+
+    .footer{
+      padding:24px 0 34px;
+      color: var(--muted2);
+      font-size:12px;
+      line-height:1.6;
+      text-align:center;
+    }
+    .hr{
+      height:1px;
+      background: var(--line);
+      margin:14px 0;
+    }
+
+    @media (max-width: 860px){
+      .hero-grid{grid-template-columns: 1fr}
+      .two{grid-template-columns: 1fr}
+      .brand{min-width:auto}
+      nav{justify-content:flex-start}
+    }
   </style>
 </head>
 
 <body>
-  <main class="wrap">
-    <!-- Header card -->
-    <section class="card hero">
-      <h1>Episode 01 — Author &amp; Book Introduction</h1>
-      <p class="sub">NCG Religious Revolution Series (English Edition)</p>
 
-      <div class="nav">
-        <!-- ✅ 전부 상대경로로: / 쓰면 404 -->
-        <a class="btn gold" href="../index.html">Back to Home</a>
-        <a class="btn" href="../about.html">About / Archive</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand" aria-label="site brand">
+      <span class="dot" aria-hidden="true"></span>
+      <div>
+        <b>Conversation with Oneness God — English Series</b>
+        <span>Episode 01 · Author & Book Introduction</span>
+      </div>
+    </div>
 
-        <!-- 페이지 내부 섹션 이동(404 없음) -->
-        <a class="btn" href="#author">Author</a>
-        <a class="btn" href="#book">Book</a>
-        <a class="btn" href="#recommendation">Recommendation</a>
+    <nav aria-label="Episode navigation">
+      <a class="navbtn primary" href="index.html">Archive</a>
+      <a class="navbtn" href="01.html#about">About</a>
+      <a class="navbtn" href="01.html#author">Author</a>
+      <a class="navbtn" href="01.html#book">Book</a>
+      <a class="navbtn" href="01.html#recommendation">Recommendation</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero" id="about">
+    <div class="hero-grid">
+      <div class="card hero-left">
+        <div class="kicker"><i></i><span>Episode 01</span></div>
+        <h1>Author & Book Introduction</h1>
+        <p class="sub">
+          This page presents the author’s background, the motivation behind the book,
+          and a recommendation written by a biblical scholar—organized in a clean, web-friendly format.
+        </p>
+
+        <div class="chips" aria-label="topic chips">
+          <span class="chip">Author Profile</span>
+          <span class="chip">Book Overview</span>
+          <span class="chip">Divine Consilience</span>
+          <span class="chip">Religious Revolution</span>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn accent" href="index.html">Back to Archive</a>
+          <a class="btn" href="#recommendation">Jump to Recommendation</a>
+        </div>
       </div>
 
-      <div class="meta">
-        <span class="tag">Episode: 01</span>
-        <span class="tag">Language: English</span>
-        <span class="tag">Format: Mobile/Web optimized</span>
-      </div>
-
-      <p class="tip">Tip: If you don’t see the latest version, add <code>?v=YYYYMMDDHH</code> to the URL and refresh.</p>
-    </section>
-
-    <!-- Hero grid -->
-    <section class="hero-grid">
-      <!-- Left: author photo -->
-      <aside class="card photo-card">
-        <figure class="photo-wrap">
-          <!-- ✅ 실제 파일명으로 변경 -->
-          <img src="../images/ep.01-writer.png" alt="Byung Youn Kim" />
-        </figure>
-        <div class="photo-meta">
-          <strong>Byung Youn Kim</strong><br/>
-          Chairman of the New Consilience Group (NCG)<br/>
-          NCG Religious Revolution Series
-          <div style="margin-top:10px; opacity:.85;">
-            Image path: <code>../images/ep.01-writer.png</code>
+      <div class="card hero-right">
+        <div class="cover" role="img" aria-label="Book cover image">
+          <div class="label">
+            <b>Conversation with Oneness God</b>
+            <span>A Spiritual Solution through Divine Consilience</span>
           </div>
         </div>
-      </aside>
+      </div>
+    </div>
+  </section>
 
-      <!-- Right: overview -->
-      <section class="card">
-        <p class="kicker">Episode overview</p>
-        <h2>What this episode covers</h2>
+  <!-- AUTHOR -->
+  <section id="author">
+    <div class="card section-card">
+      <div class="sect-title">
+        <h2>Author Introduction</h2>
+        <small>Byung Youn Kim</small>
+      </div>
 
-        <div class="callout">
-          <strong>Core direction:</strong> restoring truth by reading, comparing, and verifying — rather than inheriting unexamined belief.
+      <div class="two">
+        <div class="portrait" role="img" aria-label="Author portrait">
+          <div class="caption">
+            Byung Youn Kim — background in business administration, MBA studies,
+            and long experience in marketing and education leadership. :contentReference[oaicite:2]{index=2}
+          </div>
         </div>
 
-        <h3 style="margin-top:16px;">You will find in Episode 01</h3>
-        <ul class="bullets">
-          <li>Who the author is, and how the project began</li>
-          <li>Why “consilience” matters for religion, ethics, and truth</li>
-          <li>The book framework behind the series</li>
-        </ul>
-
-        <div class="btn-row">
-          <a class="btn" href="#author">Go to Author Section</a>
-          <a class="btn" href="#book">Go to Book Section</a>
-        </div>
-
-        <div class="downloads">
-          <p class="kicker">Downloads</p>
-          <!-- ⚠️ PDF가 레포에 업로드된 실제 위치로 href를 맞춰야 합니다 -->
-          <a class="btn gold" href="../pdf/01.BookReview-and-Author-EN.pdf">PDF: Author &amp; Book (EN)</a>
-          <a class="btn" href="../pdf/01.Recommendation-EN.pdf">PDF: Recommendation (EN)</a>
-          <p class="tip">If your PDFs are not in <code>/pdf/</code>, tell me the exact folder + filenames and I’ll match the links.</p>
-        </div>
-      </section>
-    </section>
-
-    <!-- Author section -->
-    <section id="author" class="card section">
-      <h2>Author</h2>
-      <p class="kicker">Author introduction</p>
-      <p>
-        (Paste or summarize your English author introduction here. If you want, upload the final English text and I’ll format it cleanly.)
-      </p>
-    </section>
-
-    <!-- Book section -->
-    <section id="book" class="card section">
-      <h2>Book</h2>
-      <p class="kicker">Book introduction</p>
-
-      <div style="display:grid; gap:16px; align-items:start;">
-        <div style="max-width:420px;">
-          <!-- ✅ 책 이미지 -->
-          <img src="../images/ep.01-bookcover.png" alt="Book cover" style="width:100%; border-radius:16px; box-shadow:0 10px 28px rgba(0,0,0,.35);" />
-          <p class="tip" style="margin-top:8px;">Image path: <code>../images/ep.01-bookcover.png</code></p>
-        </div>
-        <div>
+        <div class="text">
           <p>
-            (Paste or summarize your English book introduction here.)
+            Byung Youn Kim (born 1957) studied Business Administration at Yonsei University and completed an MBA program at Purdue University.
+            He worked over 20 years in major Korean companies, primarily in marketing, and also led internationalization and foreign language education initiatives.
+            Later, he taught as an adjunct professor/lecturer at multiple universities and currently runs a research institute he founded. :contentReference[oaicite:3]{index=3}
           </p>
+          <p>
+            A formative experience occurred in childhood when he confronted the fear of death; later, in 1977, he described a life-altering moment of insight.
+            The note he remembers centered on the idea that while body and mind perish, spirit persists as “the essence of all beings.” :contentReference[oaicite:4]{index=4}
+          </p>
+
+          <div class="quote">
+            “All beings consist of body, mind, and spirit… the spirit… is the essence of all beings… This spirit never dies and continues to exist.”
+            :contentReference[oaicite:5]{index=5}
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Recommendation section -->
-    <section id="recommendation" class="card section">
-      <h2>Recommendation</h2>
-      <p class="kicker">Recommendation / Endorsement</p>
-      <p>
-        (Paste your English recommendation text here, or link to the PDF above.)
-      </p>
-    </section>
+  <!-- BOOK -->
+  <section id="book">
+    <div class="card section-card">
+      <div class="sect-title">
+        <h2>Book Introduction</h2>
+        <small>Why “Oneness” · Why “Divine Consilience”</small>
+      </div>
 
-    <footer class="footer">
-      <p>© NCG — New Consilience Group</p>
-    </footer>
-  </main>
+      <div class="text">
+        <p>
+          The title <b>Conversation with Oneness God</b> reflects the author’s view that the central teaching of both the Buddha and Jesus is that
+          “all beings are one,” and that understanding this leads to a clearer understanding of the divine. :contentReference[oaicite:6]{index=6}
+        </p>
+        <p>
+          The subtitle, <b>A Spiritual Solution through Divine Consilience</b>, points to a method: searching for answers in the context of modern natural sciences,
+          and integrating insights across social and natural sciences—moving beyond what the author calls earlier, less precise “Old Consilience.” :contentReference[oaicite:7]{index=7}
+        </p>
+
+        <div class="hr"></div>
+
+        <p><b>Structure of the Book (4 Chapters)</b></p>
+        <ul class="bullets">
+          <li>
+            Chapter 1: Contradictions in the Old Testament—why much of it should be read as mythology with partial historical bases, and why Jesus proclaimed a new covenant. :contentReference[oaicite:8]{index=8}
+          </li>
+          <li>
+            Chapter 2: How Jesus’s social reform intentions were thwarted, and how Paul’s ideas shaped later doctrine. :contentReference[oaicite:9]{index=9}
+          </li>
+          <li>
+            Chapter 3: Reexamining the afterlife and “heaven on earth.” :contentReference[oaicite:10]{index=10}
+          </li>
+          <li>
+            Chapter 4: Connecting enlightenment claims about God and the essence of existence with principles of natural law. :contentReference[oaicite:11]{index=11}
+          </li>
+        </ul>
+
+        <div class="cta-row">
+          <a class="btn" href="#author">Back to Author</a>
+          <a class="btn accent" href="#recommendation">Go to Recommendation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOMMENDATION -->
+  <section id="recommendation">
+    <div class="card section-card">
+      <div class="sect-title">
+        <h2>Recommendation</h2>
+        <small>Jongrok Lee · Old Testament Scholar</small>
+      </div>
+
+      <div class="text">
+        <p>
+          The recommender is an Old Testament scholar who has taught in a seminary context for decades.
+          He writes from the standpoint that many Christians—including pastors—do not read or seriously study the Bible, and he views that as a serious problem. :contentReference[oaicite:12]{index=12}
+        </p>
+        <p>
+          He describes the author as someone who read the Bible more frequently and thoroughly than many believers,
+          and who pursued religious questions about Tao, life, death, and what lies beyond, even without adopting traditional theistic belief. :contentReference[oaicite:13]{index=13}
+        </p>
+
+        <div class="quote">
+          The recommendation emphasizes that this book can serve as a warning to Christians:
+          those who claim the Bible as absolute truth often do not read it, do not understand it properly, and cling to stereotypes—while rejecting what scholars teach.
+          :contentReference[oaicite:14]{index=14}
+        </div>
+
+        <p><b>Key Points Highlighted in the Recommendation</b></p>
+        <ul class="bullets">
+          <li>
+            The author’s effort is portrayed as extraordinary—reading widely, consulting experts, revising repeatedly, and building a comprehensive critique. :contentReference[oaicite:15]{index=15}
+          </li>
+          <li>
+            The book is recommended not because it flatters Christianity, but because it challenges complacency and “Bible-ignorance” within Christianity. :contentReference[oaicite:16]{index=16}
+          </li>
+          <li>
+            It calls readers to face hard questions rather than hide behind authority, habit, or inherited belief. :contentReference[oaicite:17]{index=17}
+          </li>
+        </ul>
+
+        <div class="cta-row">
+          <a class="btn" href="#about">Back to Top</a>
+          <a class="btn accent" href="index.html">Go to Archive</a>
+        </div>
+
+        <!-- Optional: PDF links (ONLY if you decide to keep them) -->
+        <!--
+        <div class="hr"></div>
+        <p class="sub">
+          Optional references:
+          <a href="pdf/01.BookReview-and-Author.pdf" target="_blank" rel="noopener">Author & Book Review (PDF)</a> ·
+          <a href="pdf/1-1_Recommendation.pdf" target="_blank" rel="noopener">Recommendation (PDF)</a>
+        </p>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="hr"></div>
+    New Consilience Group (NCG) · Conversation with Oneness God — English PDF Series<br/>
+    Episode 01 page is designed as a single-file, anchor-based layout to avoid 404 errors.
+  </div>
+
+</main>
 </body>
 </html>
