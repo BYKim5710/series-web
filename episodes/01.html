@@ -7,202 +7,15 @@
   <title>Episode 01 — Author & Book Introduction</title>
   <meta name="description" content="Episode 01 — Author introduction, book overview, and recommendation for Conversation with Oneness God." />
 
-  <!-- Open Graph (share preview) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Episode 01 — Author & Book Introduction" />
   <meta property="og:description" content="Conversation with Oneness God — Author profile, book introduction, and recommendation." />
   <meta property="og:image" content="https://bykim5710.github.io/series-web/images/ep.01-bookcover.png" />
   <meta property="og:url" content="https://bykim5710.github.io/series-web/episodes/01.html" />
 
-  <style>
-    :root{
-      --bg0:#070A12;
-      --bg1:#0B1020;
-      --card:#0D1630;
-      --line: rgba(255,255,255,.08);
-      --txt:#EAF0FF;
-      --muted: rgba(234,240,255,.72);
-      --muted2: rgba(234,240,255,.56);
-      --accent:#45D6FF;
-      --accent2:#9AE6FF;
-      --gold:#E6C15A;
-      --shadow: 0 10px 30px rgba(0,0,0,.45);
-      --radius: 16px;
-      --radius2: 22px;
-      --max: 1100px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--txt);
-      background:
-        radial-gradient(1200px 600px at 70% -10%, rgba(69,214,255,.10), transparent 60%),
-        radial-gradient(900px 500px at 10% 10%, rgba(230,193,90,.08), transparent 55%),
-        linear-gradient(180deg, var(--bg0), var(--bg1) 45%, var(--bg0));
-    }
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
-    .topbar{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(10px);
-      background: linear-gradient(180deg, rgba(7,10,18,.92), rgba(7,10,18,.55));
-      border-bottom: 1px solid var(--line);
-    }
-    .topbar-inner{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:12px 18px;
-      display:flex;
-      gap:12px;
-      align-items:center;
-      justify-content:space-between;
-    }
-    .brand{display:flex; gap:10px; align-items:center; min-width:220px;}
-    .dot{
-      width:10px; height:10px; border-radius:999px;
-      background: radial-gradient(circle at 30% 30%, var(--accent2), var(--accent));
-      box-shadow: 0 0 18px rgba(69,214,255,.45);
-    }
-    .brand b{font-size:14px; letter-spacing:.2px}
-    .brand span{display:block; font-size:12px; color:var(--muted2)}
-    nav{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;}
-    .navbtn{
-      text-decoration:none;
-      padding:9px 12px;
-      border:1px solid var(--line);
-      background: rgba(13,22,48,.55);
-      border-radius:999px;
-      font-size:13px;
-      color:var(--muted);
-      transition: .18s ease;
-      white-space:nowrap;
-    }
-    .navbtn:hover{transform: translateY(-1px); border-color: rgba(69,214,255,.35); color: var(--txt);}
-    .navbtn.primary{
-      background: linear-gradient(90deg, rgba(69,214,255,.18), rgba(154,230,255,.10));
-      border-color: rgba(69,214,255,.35);
-      color: var(--txt);
-    }
-
-    .hero{padding:34px 0 18px;}
-    .hero-grid{display:grid; grid-template-columns: 1.15fr .85fr; gap:16px; align-items:stretch;}
-    .card{
-      background: linear-gradient(180deg, rgba(13,22,48,.86), rgba(11,19,40,.82));
-      border:1px solid var(--line);
-      border-radius: var(--radius2);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .hero-left{padding:22px}
-    .kicker{
-      display:inline-flex; gap:10px; align-items:center;
-      padding:7px 10px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background: rgba(0,0,0,.18);
-      color: var(--muted);
-      font-size:12px;
-      letter-spacing:.2px;
-    }
-    .kicker i{
-      width:8px; height:8px; border-radius:999px;
-      background: var(--gold);
-      box-shadow: 0 0 16px rgba(230,193,90,.35);
-      display:inline-block;
-    }
-    h1{margin:14px 0 10px; font-size:28px; line-height:1.2; letter-spacing:.2px;}
-    .sub{margin:0; color: var(--muted); line-height:1.6; font-size:14.5px;}
-    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
-    .chip{
-      font-size:12px; color: var(--muted);
-      padding:7px 10px; border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(11,19,40,.55);
-    }
-    .cta-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
-    .btn{
-      text-decoration:none;
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px;
-      border-radius: 12px;
-      border:1px solid var(--line);
-      background: rgba(11,19,40,.55);
-      color: var(--txt);
-      font-size:13px;
-      transition: .18s ease;
-    }
-    .btn:hover{transform: translateY(-1px); border-color: rgba(69,214,255,.35)}
-    .btn.accent{
-      border-color: rgba(69,214,255,.40);
-      background: linear-gradient(90deg, rgba(69,214,255,.18), rgba(154,230,255,.10));
-    }
-
-    section{padding:14px 0;}
-    .section-card{padding:18px;}
-    .sect-title{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; margin-bottom:12px;}
-    .sect-title h2{margin:0; font-size:18px; letter-spacing:.2px;}
-    .sect-title small{color: var(--muted2); font-size:12px; white-space:nowrap;}
-
-    .two{display:grid; grid-template-columns: .9fr 1.1fr; gap:14px; align-items:stretch;}
-
-    /* 이미지 크롭 개선: background 대신 <img> 사용 */
-    .imgbox{
-      border-radius: var(--radius);
-      border:1px solid var(--line);
-      background: rgba(0,0,0,.18);
-      overflow:hidden;
-      position:relative;
-      min-height:260px;
-    }
-    .imgbox img{
-      width:100%;
-      height:100%;
-      display:block;
-      object-fit: cover;            /* 필요시 contain으로 바꿔도 됨 */
-      object-position: center top;  /* 얼굴이 위에 있을 때 잘림 완화 */
-    }
-    .imgcap{
-      position:absolute; left:14px; right:14px; bottom:14px;
-      padding:10px 12px;
-      border-radius: 14px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(7,10,18,.55);
-      backdrop-filter: blur(8px);
-      font-size:12px;
-      color: var(--muted);
-      line-height:1.45;
-    }
-
-    .coverbox{min-height:220px;}
-    .coverbox img{object-position:center;}
-
-    .text{color: var(--muted); line-height:1.75; font-size:14.5px;}
-    .text p{margin:0 0 10px}
-    .quote{
-      margin:12px 0 0;
-      padding:14px 14px;
-      border-left: 3px solid rgba(69,214,255,.55);
-      background: rgba(69,214,255,.07);
-      border-radius: 12px;
-      color: var(--txt);
-      line-height:1.65;
-      font-size:14px;
-    }
-    .bullets{margin:10px 0 0; padding-left:18px; color: var(--muted); line-height:1.7; font-size:14.5px;}
-    .bullets li{margin:6px 0}
-    .hr{height:1px; background: var(--line); margin:14px 0;}
-    .footer{padding:24px 0 34px; color: var(--muted2); font-size:12px; line-height:1.6; text-align:center;}
-
-    @media (max-width: 860px){
-      .hero-grid{grid-template-columns: 1fr}
-      .two{grid-template-columns: 1fr}
-      .brand{min-width:auto}
-      nav{justify-content:flex-start}
-      .imgbox{min-height:220px;}
-    }
-  </style>
+  <!-- shared css -->
+  <link rel="stylesheet" href="../site.css" />
 </head>
 
 <body>
@@ -229,7 +42,7 @@
 
 <main class="wrap">
 
-  <!-- ABOUT / HERO -->
+  <!-- ABOUT -->
   <section class="hero" id="about">
     <div class="hero-grid">
       <div class="card hero-left">
@@ -240,11 +53,12 @@
           and presents a recommendation by an Old Testament scholar—organized in a web-friendly format.
         </p>
 
+        <!-- ✅ clickable chips -->
         <div class="chips" aria-label="topic chips">
-          <span class="chip">Author Profile</span>
-          <span class="chip">Book Overview</span>
-          <span class="chip">Divine Consilience</span>
-          <span class="chip">Religious Revolution</span>
+          <a class="chip" href="#author">Author Profile</a>
+          <a class="chip" href="#book">Book Overview</a>
+          <a class="chip" href="#new-consilience">New Consilience</a>
+          <a class="chip" href="#revolution">Religious Revolution</a>
         </div>
 
         <div class="cta-row">
@@ -258,7 +72,7 @@
           <img src="../images/ep.01-bookcover.png" alt="Book cover" />
           <div class="imgcap">
             <b style="color:var(--txt); display:block; margin-bottom:4px;">Conversation with Oneness God</b>
-            <span style="color:var(--muted2);">A Spiritual Solution through Divine Consilience</span>
+            <span style="color:var(--muted2);">A Spiritual Solution through New Consilience</span>
           </div>
         </div>
       </div>
@@ -301,11 +115,6 @@
             But the spirit, which has existed since the beginning and will exist eternally, is the essence of all beings.
             This spirit never dies and continues to exist.”
           </div>
-
-          <p style="margin-top:12px;">
-            He later pursued answers through scriptures and philosophy, and came to believe that the laws of religion and society are not separate from nature,
-            but closely interconnected—leading him toward a framework he calls “Divine Consilience.”
-          </p>
         </div>
       </div>
     </div>
@@ -322,11 +131,11 @@
       <div class="text">
         <p>
           The title <b>Conversation with Oneness God</b> reflects the author’s view that the central teaching of both the Buddha and Jesus is that
-          “all beings are one,” and that a true understanding of this naturally leads to a clearer understanding of the divine.
+          “all beings are one,” and that understanding this leads to a clearer understanding of the divine.
         </p>
         <p>
-          The subtitle, <b>A Spiritual Solution through Divine Consilience</b>, emphasizes the author’s method: seeking answers in the context of
-          21st-century advanced natural sciences, and integrating social and natural sciences beyond what he calls earlier “Old Consilience.”
+          The subtitle, <b>A Spiritual Solution through New Consilience</b>, emphasizes a method:
+          seeking answers in the context of 21st-century natural sciences and integrating social and natural sciences beyond earlier “old consilience.”
         </p>
 
         <div class="hr"></div>
@@ -345,12 +154,66 @@
         <ul class="bullets">
           <li><b>Chapter 1</b> — Analyzes contradictions in the Old Testament; argues much of it is mythology based on partial historical fact, and explains why Jesus proclaimed a new covenant distinct from the Old Testament.</li>
           <li><b>Chapter 2</b> — Explains how Jesus’s revolutionary intentions for social reform were thwarted, and how Paul’s ideas became a foundation of modern Christian doctrine.</li>
-          <li><b>Chapter 3</b> — Exposes the fallacy of the afterlife as commonly taught and reexamines the meaning of “heaven on earth” preached by Jesus.</li>
+          <li><b>Chapter 3</b> — Reexamines the afterlife and “heaven on earth,” challenging conventional religious depictions.</li>
           <li><b>Chapter 4</b> — Connects truths declared by enlightened figures such as Jesus and the Buddha regarding God and the essence of existence with principles of natural law.</li>
         </ul>
 
         <div class="cta-row">
           <a class="btn" href="#author">Back to Author</a>
+          <a class="btn accent" href="#recommendation">Go to Recommendation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW CONSILIENCE -->
+  <section id="new-consilience">
+    <div class="card section-card">
+      <div class="sect-title">
+        <h2>New Consilience</h2>
+        <small>Beyond “Old Consilience”</small>
+      </div>
+
+      <div class="text">
+        <p>
+          “New Consilience” here means a modern integration of knowledge—especially linking insights from natural sciences
+          with social sciences—so that questions about life, death, spirit, and society are examined with clearer methods and evidence.
+        </p>
+        <ul class="bullets">
+          <li><b>Modern scientific context:</b> the author insists religious questions must be revisited in the era of advanced natural sciences.</li>
+          <li><b>Integration, not separation:</b> laws of religion and society are not isolated from nature; they are interconnected.</li>
+          <li><b>Practical orientation:</b> the goal is not abstract theory, but a worldview that changes how we live and organize community.</li>
+        </ul>
+
+        <div class="cta-row">
+          <a class="btn" href="#book">Back to Book</a>
+          <a class="btn accent" href="#revolution">Go to Religious Revolution</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELIGIOUS REVOLUTION -->
+  <section id="revolution">
+    <div class="card section-card">
+      <div class="sect-title">
+        <h2>Religious Revolution</h2>
+        <small>Restoration of truth · correction of distortion</small>
+      </div>
+
+      <div class="text">
+        <p>
+          The author argues that institutional religion often concealed or distorted truth and asks religions to return to their original function:
+          helping people awaken, live ethically, and build a better world.
+        </p>
+        <ul class="bullets">
+          <li><b>Expose distortion:</b> examine doctrines that conflict with the core teachings of sages.</li>
+          <li><b>Restore meaning:</b> re-center on truth, conscience, and human dignity.</li>
+          <li><b>Move toward practice:</b> turn “belief” into lived transformation and community responsibility.</li>
+        </ul>
+
+        <div class="cta-row">
+          <a class="btn" href="#new-consilience">Back to New Consilience</a>
           <a class="btn accent" href="#recommendation">Go to Recommendation</a>
         </div>
       </div>
@@ -367,7 +230,7 @@
 
       <div class="text">
         <p>
-          Jongrok Lee, an Old Testament scholar and longtime seminary professor, frames his recommendation around a striking problem:
+          An Old Testament scholar and longtime seminary professor frames his recommendation around a serious problem:
           many Christians—including pastors—do not read, study, or properly understand the Bible, relying instead on stereotypes.
         </p>
 
@@ -377,20 +240,15 @@
         </div>
 
         <p style="margin-top:12px;">
-          He describes the author as a lifelong seeker after truth—concerned with Tao, life, death, and what lies beyond—who read the Bible
-          more often and more thoroughly than many believers, pastors, and theologians, and who sought advice from experts to critique it seriously.
+          He describes the author as a lifelong truth-seeker who read the Bible more often and more thoroughly than many believers,
+          sought advice from experts, revised repeatedly, and produced a large manuscript through persistent work.
         </p>
 
         <ul class="bullets">
-          <li>He calls the author “lovable and precious” not only as a longtime friend, but as a sincere truth-seeker.</li>
-          <li>He emphasizes the author’s extraordinary effort: extensive reading, many conversations, a huge manuscript, and countless revisions.</li>
-          <li>He recommends the book as a “warning to Christians” to recognize their laziness and ignorance about the Bible.</li>
-          <li>He hopes Christians will read it and awaken to how crude their stereotypes are—precisely because they do not read the text they claim to honor.</li>
+          <li>The book is recommended as a <b>warning</b> against complacency and “Bible-ignorance.”</li>
+          <li>It challenges inherited belief and urges readers to confront the text and reality directly.</li>
+          <li>It calls Christians to stop rejecting scholarship and start reading what they claim to honor.</li>
         </ul>
-
-        <p style="margin-top:12px;">
-          In closing, he dedicates this recommendation to his friend, “who has chosen to live the life of a hard truth seeker” in order to realize and share the universal Tao.
-        </p>
 
         <div class="cta-row">
           <a class="btn" href="#about">Back to Top</a>
@@ -403,7 +261,7 @@
   <div class="footer">
     <div class="hr"></div>
     Conversation with Oneness God — English Series · Episode 01<br/>
-    Single-file layout (anchors) to prevent 404 errors.
+    Single-file layout (anchors) + shared CSS (site.css)
   </div>
 
 </main>
