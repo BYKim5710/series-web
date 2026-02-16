@@ -111,7 +111,7 @@ nav{
   margin-bottom:20px;
 }
 
-/* ===== Image Box (핵심 수정 완료 버전) ===== */
+/* ===== Image Box (핵심 수정 완료 버전) ===== */ 
 .imgbox{
   position:relative;
   border-radius:var(--radius);
